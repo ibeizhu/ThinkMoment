@@ -1,0 +1,20 @@
+<div class="work-tpl">
+    <div class="title">
+        <h2>Work Experience</h2>
+        <p class="line"></p>
+    </div>
+    <ul class="clearfix">
+        <li v-for="workItem in tpldata.works" v-bind:class="['fleft','card' + ($index + 1)]">
+            <div class="image">
+                <img src="{{workItem.image}}">
+            </div>
+            <p class="title">
+                {{workItem.company}}
+            </p>
+            <p class="detail">
+                {{workItem.detail}}
+            </p>
+            <a href="#" class="read">READ MORE&nbsp;&nbsp;&gt;</a>
+        </li>
+    </ul>
+</div>

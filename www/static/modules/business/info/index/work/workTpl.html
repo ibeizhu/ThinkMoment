@@ -1,0 +1,8 @@
+<div class="work-tpl">
+    <h2>WORK EXPERIENCE</h2>
+    <div v-for="work in tpldata" class="work-item">
+        <p class="date">{{work.startDate | formatDate 'LL' }}&nbsp;&nbsp;-&nbsp;&nbsp;{{work.endDate | formatDate 'LL' }}</p>
+        <p class="posi">{{work.position}} &nbsp;&nbsp;-&nbsp;&nbsp; {{work.company}}</p>
+        <p class="desc">{{work.description}}</p>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+http://inorganik.github.io/countUp.js/
+
+
+
+
+var options = {
+  useEasing : true,
+  useGrouping : true,
+  separator : ',',
+  decimal : '.',
+  prefix : '',
+  suffix : ''
+};
+var demo = new CountUp("myTargetElement", NaN, NaN, 0, 2.5, options);
+demo.start();

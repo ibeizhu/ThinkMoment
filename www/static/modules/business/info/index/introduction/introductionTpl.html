@@ -1,0 +1,22 @@
+<div class="intro-tpl">
+    <div class="why-me">
+        <h2>WHY ME?</h2>
+        <div class="content">
+            {{tpldata.introduction}}
+        </div>
+    </div>
+    <div class="skill">
+        <h2>PROFESSIONAL SKILLS</h2>
+        <div class="content">
+            <div v-for="skill in tpldata.skill" class="item clearfix">
+                <span class="key">{{skill.key}}</span>
+                <div class="fright" style="display: inline-block;">
+                    <div class="points">
+                        <span v-for="n in skill.value" class="entity"></span>
+                        <span v-for="n in (tpldata.total - skill.value)" class="empty"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

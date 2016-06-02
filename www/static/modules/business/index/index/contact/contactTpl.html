@@ -1,0 +1,22 @@
+<div class="contact-tpl">
+    <img src="./images/contact.jpg">
+    <div class="info">
+        <h2>Contact</h2>
+        <p class="line"></p>
+        <div class="edit">
+            <div class="name-wrap">
+                <p>Your name</p>
+                <input type="text" class="name" v-model="name">
+            </div>
+            <div class="email-wrap">
+                <p>Your email</p>
+                <input type="text" class="email" v-model="email">
+            </div>
+            <div class="message-wrap">
+                <p>Message</p>
+                <input type="text" class="message" v-model="message">
+            </div>
+        </div>
+        <a class="btn transition" href="#" @click="addMessage">SEND MESSAGE</a>
+    </div>
+</div>

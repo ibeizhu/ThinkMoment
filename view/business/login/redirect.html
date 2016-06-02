@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录验证跳转</title>
+    <script src="/static/media/common_lib_3rd/core/jquery/1.9.1/jquery.js"></script>
+    <script>
+        // TODO Moment http host 配置
+        // 检查登录
+        $(function(){
+            // jsonp get login user ticket
+            $.ajax({
+                url:"http://apitest.yourdream.cc/index.php?method=sso.getTicketJsonp",
+                dataType:'jsonp',
+                data:{},
+                jsonp:'callback',
+                success:function(result){
+                    if(result.result > 0 || result.data.ticket==""){
+                        location.href="http://apitest.yourdream.cc/business/login";
+                        return;
+                    }
+                    // send ticket to node server
+                    $.ajax({
+                        url:"/business/login/login",
+                        type:'GET',
+                        data:{
+                            ticket:result.data.ticket
+                        },
+                        success:function(result){
+                            // here sth to do
+                        },
+                        error:function(error){
+                            location.href="http://apitest.yourdream.cc/business/login";
+                            console.log("check get ticket fail:");
+                            console.log(error);
+                        }
+                    });
+                },
+                error:function(error){
+                    location.href="http://apitest.yourdream.cc/business/login";
+                    console.log("jsonp get ticket fail:");
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    登录检查中。。。
+</div>
+</body>
+</html>

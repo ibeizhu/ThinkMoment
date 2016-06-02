@@ -1,0 +1,33 @@
+@import "/src/static/media/common_lib_cyzs/less/common/cyzs-global-define";
+.comment-pagination{
+  margin: 30px auto;
+  ul.m-pagination-page{
+    float: none;
+    text-align: center;
+    border-bottom: 0;
+    li{
+      float: none;
+      margin-left: 10px;
+      display: inline-block;
+      a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: #fff;
+        color: @cyzs-color-dark-purple;
+        border: 1px solid @cyzs-color-white-purple;
+        border-radius: 0;
+        padding: 0;
+        text-align: center;
+      }
+    }
+    li.active{
+      a{
+        background: @cyzs-color-light-purple;
+        color: @cyzs-color-white;
+        border: 1px solid @cyzs-color-light-purple;
+      }
+    }
+  }
+}

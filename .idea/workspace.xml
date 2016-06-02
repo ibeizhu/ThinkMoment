@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3718d916-76c8-4481-adb3-f54c92c8c208" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/avatar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/ironMan8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/work1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/work2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/images/work3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/images/contact.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/bak.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/photo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/top.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/bak.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/photo1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/photo2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/photo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/readme.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/moment.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nginx.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pm2.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/config/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/base.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/contact.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/controller/work.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/logic/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/model/contact.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/model/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/model/info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/model/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/model/work.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/bootstrap/global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/bootstrap/middleware.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/bootstrap/tools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/db.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/env/development.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/env/production.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/env/testing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/hook.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/locale/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/session.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/config/view.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/controller/error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/inc/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/inc/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/inc/left.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/index/bak.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/index/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/index/sample.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/info/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/login/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/login/redirect.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/common/error/400.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/common/error/403.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/common/error/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/common/error/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/common/error/503.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/development.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/production.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/artTemplate/3.0.0/template.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/artTemplate/3.0.0/template.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/backbone/1.3.2/backbone-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/backbone/1.3.2/backbone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/cookie/cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/css/0.1.2/css.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/jquery/1.9.1/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/jquery/2.1.4/components.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/jquery/2.1.4/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/jquery/2.2.2/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/jquery/2.2.2/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/text/2.0.12/text.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/underscore/1.8.3/underscore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/underscore/1.8.3/underscore.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/vue/1.0/vue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/vue/1.0/vue.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/vueRouter/1.0/vue-router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/core/vueRouter/1.0/vue-router.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/framework/BaseVue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/common/lib_cyzs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.AccountHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.AjaxHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BaseView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BrowserHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BusinessDataHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.CommonDataFunction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Framework.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.ModuleView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.PageView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.ShareHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Tools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.UrlHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.WebViewJs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/js/cyzs/framework/CYZS.Alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/countUp/angular-countUp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/countUp/angular-countUp.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/countUp/countUp-jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/countUp/countUp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/countUp/countUp.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/countUp/readMe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/flexslider/2.5.0/jquery.flexslider-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/handlebars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/jquery.lazyload/1.9.1/jquery.lazyload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/jquery.lazyload/1.9.1/jquery.lazyload.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/jquery.waterfall.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/jquery.waterfall/0.1.72/jquery.waterfall.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/json2/20150503/json2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/pagination/jquery.pagination-1.2.7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/pagination/jquery.pagination.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/pagination/pagination_hack.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/pie/1.0.0/PIE.htc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/pie/1.0.0/PIE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/qrcode/1.0.0/jquery.qrcode.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/slick/slick-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/slick/slick.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/slick/slick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/star/ReadMe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/star/sparkle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/star/sparkle.jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/waterfall.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/styles/initial.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/contact.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/contact.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/contactTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/entry.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/entry.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/entry.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/main.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/main/mainTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/webpack.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/work.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/work.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/index/index/work/workTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/entry.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/entry.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/entry.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/header/header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/header/header.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/header/headerTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/introduction/introduction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/introduction/introduction.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/introduction/introductionTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/main/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/main/main.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/main/mainTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/webpack.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/work/work.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/work/work.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/info/index/work/workTpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/styles/business/login/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/testing.js" />
+    </list>
+    <ignored path="ThinkMoment.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/ThinkMoment.iml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/misc.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ThinkMoment" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1800" />
+    <option name="y" value="169" />
+    <option name="width" value="1457" />
+    <option name="height" value="821" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3718d916-76c8-4481-adb3-f54c92c8c208" name="Default" comment="" />
+      <created>1464863904677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1464863904677</updated>
+      <workItem from="1464863906059" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1800" y="169" width="1457" height="821" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
