@@ -1,0 +1,4 @@
+node_modules/*
+app/*
+.idea/*
+.idea/workspace.xml*
