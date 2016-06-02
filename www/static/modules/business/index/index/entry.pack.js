@@ -91,6 +91,7 @@
 	    },
 	    ready:function(){
 	        this.renderStarPlugin();
+	        // this.renderRevolutionPlugin();
 	    },
 	    data: function() {
 	        // 作用域数据结构
@@ -118,6 +119,14 @@
 	                delay: 200,
 	                pause: 500,
 	                size: 20
+	            });
+	        },
+	        renderRevolutionPlugin:function () {
+	            $(".js_mainTpl").revolution({
+	                delay:9000,
+	                startwidth:1170,
+	                startheight:500,
+	                hideThumbs:10
 	            });
 	        }
 	    },
@@ -484,7 +493,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"main-tpl\">\n    <div class=\"position header\">\n        <p class=\"title\">\n            WELCOME\n            <span class=\"line\"></span>\n        </p>\n        <p class=\"name\">{{account}}</p>\n        <p class=\"detail\">{{motto}}</p>\n    </div>\n    <div class=\"position about-me\">\n        <div class=\"info\">\n            <h2>About me</h2>\n            <p class=\"line\"></p>\n            <p class=\"word\">{{introduction}}</p>\n            <a class=\"btn transition\" href=\"#\">READ MORE</a>\n        </div>\n        <img src=\"{{avatar}}\">\n    </div>\n    <div class=\"position lastest\">\n        <work-cpn :tpldata=\"$data\"></work-cpn>\n    </div>\n    <div class=\"position gallery\">\n\n    </div>\n    <div class=\"position contact\">\n        <contact-cpn :tpldata=\"$data\"></contact-cpn>\n    </div>\n</div>";
+	module.exports = "<div class=\"main-tpl js_mainTpl\">\n    <div class=\"position header\">\n        <p class=\"title\">\n            WELCOME\n            <span class=\"line\"></span>\n        </p>\n        <p class=\"name\">{{account}}</p>\n        <p class=\"detail\">{{motto}}</p>\n    </div>\n    <div class=\"position about-me\">\n        <div class=\"info\">\n            <h2>About me</h2>\n            <p class=\"line\"></p>\n            <p class=\"word\">{{introduction}}</p>\n            <a class=\"btn transition\" href=\"#\">READ MORE</a>\n        </div>\n        <img v-bind:src=\"$data.avatar\">\n    </div>\n    <div class=\"position lastest\">\n        <work-cpn :tpldata=\"$data\"></work-cpn>\n    </div>\n    <div class=\"position gallery\">\n\n    </div>\n    <div class=\"position contact\">\n        <contact-cpn :tpldata=\"$data\"></contact-cpn>\n    </div>\n</div>";
 
 /***/ },
 /* 8 */
@@ -24520,7 +24529,7 @@
 /* 117 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"work-tpl\">\n    <div class=\"title\">\n        <h2>Work Experience</h2>\n        <p class=\"line\"></p>\n    </div>\n    <ul class=\"clearfix\">\n        <li v-for=\"workItem in tpldata.works\" v-bind:class=\"['fleft','card' + ($index + 1)]\">\n            <div class=\"image\">\n                <img src=\"{{workItem.image}}\">\n            </div>\n            <p class=\"title\">\n                {{workItem.company}}\n            </p>\n            <p class=\"detail\">\n                {{workItem.detail}}\n            </p>\n            <a href=\"#\" class=\"read\">READ MORE&nbsp;&nbsp;&gt;</a>\n        </li>\n    </ul>\n</div>";
+	module.exports = "<div class=\"work-tpl\">\n    <div class=\"title\">\n        <h2>Work Experience</h2>\n        <p class=\"line\"></p>\n    </div>\n    <ul class=\"clearfix\">\n        <li v-for=\"workItem in tpldata.works\" v-bind:class=\"['fleft','card' + ($index + 1)]\">\n            <div class=\"image\">\n                <img :src=\"workItem.image\">\n            </div>\n            <p class=\"title\">\n                {{workItem.company}}\n            </p>\n            <p class=\"detail\">\n                {{workItem.detail}}\n            </p>\n            <a href=\"#\" class=\"read\">READ MORE&nbsp;&nbsp;&gt;</a>\n        </li>\n    </ul>\n</div>";
 
 /***/ },
 /* 118 */

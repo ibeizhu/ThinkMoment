@@ -1,4 +1,4 @@
-<div class="main-tpl">
+<div class="main-tpl js_mainTpl">
     <div class="position header">
         <p class="title">
             WELCOME
@@ -14,7 +14,7 @@
             <p class="word">{{introduction}}</p>
             <a class="btn transition" href="#">READ MORE</a>
         </div>
-        <img src="{{avatar}}">
+        <img v-bind:src="$data.avatar">
     </div>
     <div class="position lastest">
         <work-cpn :tpldata="$data"></work-cpn>

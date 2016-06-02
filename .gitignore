@@ -1,5 +1,11 @@
-node_modules/*
-app/*
+#idea
+.idea
 .idea/*
 .idea/workspace.xml
+*.iml
+.settings/*
+.project
+node_modules/*
+npm-debug.log
+app/*
 runtime/*

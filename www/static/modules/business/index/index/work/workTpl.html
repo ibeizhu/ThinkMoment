@@ -6,7 +6,7 @@
     <ul class="clearfix">
         <li v-for="workItem in tpldata.works" v-bind:class="['fleft','card' + ($index + 1)]">
             <div class="image">
-                <img src="{{workItem.image}}">
+                <img :src="workItem.image">
             </div>
             <p class="title">
                 {{workItem.company}}

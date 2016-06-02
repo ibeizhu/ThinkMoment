@@ -21,6 +21,7 @@ module.exports = BaseVue.extend({
     },
     ready:function(){
         this.renderStarPlugin();
+        // this.renderRevolutionPlugin();
     },
     data: function() {
         // 作用域数据结构
@@ -48,6 +49,14 @@ module.exports = BaseVue.extend({
                 delay: 200,
                 pause: 500,
                 size: 20
+            });
+        },
+        renderRevolutionPlugin:function () {
+            $(".js_mainTpl").revolution({
+                delay:9000,
+                startwidth:1170,
+                startheight:500,
+                hideThumbs:10
             });
         }
     },
