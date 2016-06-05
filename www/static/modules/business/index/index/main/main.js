@@ -9,6 +9,7 @@ var BaseVue = require("BaseVue");
 // 组件
 var Work = require("../work/work");
 var Contact = require("../contact/contact");
+var Statistics = require("../statistics/statistics");
 
 module.exports = BaseVue.extend({
     template: moduleTpl,
@@ -17,7 +18,8 @@ module.exports = BaseVue.extend({
     },
     components:{
         "work-cpn":Work,
-        "contact-cpn":Contact
+        "contact-cpn":Contact,
+        "statistics-cpn":Statistics
     },
     ready:function(){
         this.renderStarPlugin();
