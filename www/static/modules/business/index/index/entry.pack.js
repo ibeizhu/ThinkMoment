@@ -93,6 +93,7 @@
 	    },
 	    ready:function(){
 	        this.renderStarPlugin();
+	        this.bindScrollEvent();
 	        // this.renderRevolutionPlugin();
 	    },
 	    data: function() {
@@ -129,6 +130,14 @@
 	                startwidth:1170,
 	                startheight:500,
 	                hideThumbs:10
+	            });
+	        },
+	        bindScrollEvent:function () {
+	            var self = this;
+	            $(window).bind("scroll",function () {
+	                if($(window).scrollTop() + parseInt($(window).height()) -30 > $(".js_workTpl").offset().top){
+	                    $(".js_image").animate({top:"30px",left:"30px"},1500);
+	                }
 	            });
 	        }
 	    },
@@ -24522,7 +24531,7 @@
 
 
 	// module
-	exports.push([module.id, ".work-tpl {\n  width: 100%;\n  font-size: 14px;\n}\n.work-tpl .title {\n  position: relative;\n  left: 50%;\n  width: 337px;\n  -webkit-transform: translate(-50%, 0);\n  -moz-transform: translate(-50%, 0);\n  -o-transform: translate(-50%, 0);\n  transform: translate(-50%, 0);\n}\n.work-tpl .title h2 {\n  color: #ad7835;\n  font-size: 40px;\n}\n.work-tpl .title .line {\n  margin-top: 10px;\n  width: 80px;\n  height: 3px;\n  background-color: #ad7835;\n}\n.work-tpl ul {\n  position: relative;\n  margin-top: 50px;\n}\n.work-tpl ul li {\n  width: 310px;\n  overflow: hidden;\n}\n.work-tpl ul li .image {\n  position: relative;\n  width: 280px;\n  height: 200px;\n  background-color: #353535;\n}\n.work-tpl ul li .image img {\n  position: absolute;\n  left: 30px;\n  top: 30px;\n  width: 280px;\n  height: 200px;\n}\n.work-tpl ul li .title {\n  margin-top: 50px;\n  width: 100%;\n  color: #ad7835;\n  font-size: 16px;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #ad7835;\n}\n.work-tpl ul li .detail {\n  margin-top: 20px;\n  color: #fff;\n}\n.work-tpl ul li .read {\n  display: inline-block;\n  margin-top: 20px;\n}\n.work-tpl ul li .read:hover {\n  color: #ad7835;\n}\n.work-tpl ul .card1 {\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.work-tpl ul .card2 {\n  position: absolute;\n  top: 200px;\n  left: 350px;\n}\n.work-tpl ul .card3 {\n  position: absolute;\n  top: 0;\n  left: 700px;\n}\n", ""]);
+	exports.push([module.id, ".work-tpl {\n  width: 100%;\n  font-size: 14px;\n}\n.work-tpl .title {\n  position: relative;\n  left: 50%;\n  width: 337px;\n  -webkit-transform: translate(-50%, 0);\n  -moz-transform: translate(-50%, 0);\n  -o-transform: translate(-50%, 0);\n  transform: translate(-50%, 0);\n}\n.work-tpl .title h2 {\n  color: #ad7835;\n  font-size: 40px;\n}\n.work-tpl .title .line {\n  margin-top: 10px;\n  width: 80px;\n  height: 3px;\n  background-color: #ad7835;\n}\n.work-tpl ul {\n  position: relative;\n  margin-top: 50px;\n}\n.work-tpl ul li {\n  width: 310px;\n  overflow: hidden;\n}\n.work-tpl ul li .image {\n  position: relative;\n  width: 280px;\n  height: 200px;\n  background-color: #353535;\n}\n.work-tpl ul li .image img {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 280px;\n  height: 200px;\n}\n.work-tpl ul li .title {\n  margin-top: 50px;\n  width: 100%;\n  color: #ad7835;\n  font-size: 16px;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #ad7835;\n}\n.work-tpl ul li .detail {\n  margin-top: 20px;\n  color: #fff;\n}\n.work-tpl ul li .read {\n  display: inline-block;\n  margin-top: 20px;\n}\n.work-tpl ul li .read:hover {\n  color: #ad7835;\n}\n.work-tpl ul .card1 {\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.work-tpl ul .card2 {\n  position: absolute;\n  top: 200px;\n  left: 350px;\n}\n.work-tpl ul .card3 {\n  position: absolute;\n  top: 0;\n  left: 700px;\n}\n", ""]);
 
 	// exports
 
@@ -24531,7 +24540,7 @@
 /* 117 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"work-tpl\">\n    <div class=\"title\">\n        <h2>Work Experience</h2>\n        <p class=\"line\"></p>\n    </div>\n    <ul class=\"clearfix\">\n        <li v-for=\"workItem in tpldata.works\" v-bind:class=\"['fleft','card' + ($index + 1)]\">\n            <div class=\"image\">\n                <img :src=\"workItem.image\">\n            </div>\n            <p class=\"title\">\n                {{workItem.company}}\n            </p>\n            <p class=\"detail\">\n                {{workItem.detail}}\n            </p>\n            <a href=\"#\" class=\"read\">READ MORE&nbsp;&nbsp;&gt;</a>\n        </li>\n    </ul>\n</div>";
+	module.exports = "<div class=\"work-tpl js_workTpl\">\n    <div class=\"title\">\n        <h2>Work Experience</h2>\n        <p class=\"line\"></p>\n    </div>\n    <ul class=\"clearfix\">\n        <li v-for=\"workItem in tpldata.works\" v-bind:class=\"['fleft','card' + ($index + 1)]\">\n            <div class=\"image\">\n                <img :src=\"workItem.image\" class=\"js_image\">\n            </div>\n            <p class=\"title\">\n                {{workItem.company}}\n            </p>\n            <p class=\"detail\">\n                {{workItem.detail}}\n            </p>\n            <a href=\"#\" class=\"read\">READ MORE&nbsp;&nbsp;&gt;</a>\n        </li>\n    </ul>\n</div>";
 
 /***/ },
 /* 118 */

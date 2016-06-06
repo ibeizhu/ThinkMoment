@@ -23,6 +23,7 @@ module.exports = BaseVue.extend({
     },
     ready:function(){
         this.renderStarPlugin();
+        this.bindScrollEvent();
         // this.renderRevolutionPlugin();
     },
     data: function() {
@@ -59,6 +60,14 @@ module.exports = BaseVue.extend({
                 startwidth:1170,
                 startheight:500,
                 hideThumbs:10
+            });
+        },
+        bindScrollEvent:function () {
+            var self = this;
+            $(window).bind("scroll",function () {
+                if($(window).scrollTop() + parseInt($(window).height()) -30 > $(".js_workTpl").offset().top){
+                    $(".js_image").animate({top:"30px",left:"30px"},1500);
+                }
             });
         }
     },

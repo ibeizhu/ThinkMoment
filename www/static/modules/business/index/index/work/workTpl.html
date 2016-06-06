@@ -1,4 +1,4 @@
-<div class="work-tpl">
+<div class="work-tpl js_workTpl">
     <div class="title">
         <h2>Work Experience</h2>
         <p class="line"></p>
@@ -6,7 +6,7 @@
     <ul class="clearfix">
         <li v-for="workItem in tpldata.works" v-bind:class="['fleft','card' + ($index + 1)]">
             <div class="image">
-                <img :src="workItem.image">
+                <img :src="workItem.image" class="js_image">
             </div>
             <p class="title">
                 {{workItem.company}}
