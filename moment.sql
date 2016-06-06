@@ -99,3 +99,18 @@ CREATE TABLE `moment_work`(
     `update_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
     PRIMARY KEY (`id`)
 )ENGINE=MyISAM AUTO_INCREMENT=300000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='工作简历表';
+
+-- ----------------------------
+--  Table structure for `moment_statistic`
+-- ----------------------------
+DROP TABLE IF EXISTS `moment_statistic`;
+CREATE TABLE `moment_statistic`(
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `liked` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '点赞人数',
+    `contact` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '联系我人数',
+    `day_visit` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '当日访问人数',
+    `total_visit` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '总访问人数',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
+    PRIMARY KEY (`id`)
+)ENGINE=MyISAM AUTO_INCREMENT=400000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='统计表';
