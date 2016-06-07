@@ -24562,7 +24562,6 @@
 	        tpldata:Object
 	    },
 	    ready:function(){
-
 	    },
 	    data: function() {
 	        // 作用域数据结构
@@ -24585,16 +24584,27 @@
 	                data: record,
 	                type: "GET",
 	                success: function (res) {
-	                    if(!res.data.result){
-	                        alert(res.data.message);
+	                    if(!res.result){
+	                        self.renderNotice(res.message);
 	                        return;
 	                    }
-	                    alert("发送成功!");
+	                    self.renderNotice("Your message has been sent successfully.");
 	                    self.name = "";
 	                    self.email = "";
 	                    self.message = "";
 	                }
 	            });
+	        },
+	        renderNotice:function (message) {
+	            this.notification = new NotificationFx({
+	                message : '<span class="icon icon-megaphone"></span><p>'+message+' Go <a href="#">check it out</a> now.</p>',
+	                layout : 'bar',
+	                effect : 'slidetop',
+	                type : 'notice', // notice, warning or error
+	                onClose : function() {
+	                }
+	            });
+	            this.notification.show();
 	        }
 	    },
 	    filters:{
@@ -24646,7 +24656,7 @@
 /* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"contact-tpl\">\n    <img src=\"" + __webpack_require__(122) + "\">\n    <div class=\"info\">\n        <h2>Contact</h2>\n        <p class=\"line\"></p>\n        <div class=\"edit\">\n            <div class=\"name-wrap\">\n                <p>Your name</p>\n                <input type=\"text\" class=\"name\" v-model=\"name\">\n            </div>\n            <div class=\"email-wrap\">\n                <p>Your email</p>\n                <input type=\"text\" class=\"email\" v-model=\"email\">\n            </div>\n            <div class=\"message-wrap\">\n                <p>Message</p>\n                <input type=\"text\" class=\"message\" v-model=\"message\">\n            </div>\n        </div>\n        <a class=\"btn transition\" href=\"#\" @click=\"addMessage\">SEND MESSAGE</a>\n    </div>\n</div>";
+	module.exports = "<div class=\"contact-tpl\">\n    <img src=\"" + __webpack_require__(122) + "\">\n    <div class=\"info\">\n        <h2>Contact</h2>\n        <p class=\"line\"></p>\n        <div class=\"edit\">\n            <div class=\"name-wrap\">\n                <p>Your name</p>\n                <input type=\"text\" class=\"name\" v-model=\"name\">\n            </div>\n            <div class=\"email-wrap\">\n                <p>Your email</p>\n                <input type=\"text\" class=\"email\" v-model=\"email\">\n            </div>\n            <div class=\"message-wrap\">\n                <p>Message</p>\n                <input type=\"text\" class=\"message\" v-model=\"message\">\n            </div>\n        </div>\n        <a class=\"btn transition\" href=\"javascript:void(0)\" @click=\"addMessage\">SEND MESSAGE</a>\n    </div>\n</div>";
 
 /***/ },
 /* 122 */
@@ -24748,7 +24758,7 @@
 
 
 	// module
-	exports.push([module.id, ".statistic-tpl li {\n  float: left;\n  width: 25%;\n  font-size: 15px;\n  margin: 0;\n  padding: 20px 0;\n  height: 120px;\n  overflow: hidden;\n  text-align: center;\n  color: #fff;\n}\n.statistic-tpl li p {\n  margin-top: 10px;\n  margin-bottom: 20px;\n  font-size: 50px;\n  line-height: 50px;\n  font-weight: 300;\n}\n.statistic-tpl li:nth-child(1) {\n  background-color: #333333;\n}\n.statistic-tpl li:nth-child(2) {\n  background-color: #4a4a4a;\n}\n.statistic-tpl li:nth-child(3) {\n  background-color: #5f5f5f;\n}\n.statistic-tpl li:nth-child(4) {\n  background-color: #797979;\n}\n", ""]);
+	exports.push([module.id, ".statistic-tpl li {\n  float: left;\n  width: 25%;\n  font-size: 15px;\n  margin: 0;\n  padding: 20px 0;\n  overflow: hidden;\n  text-align: center;\n  color: #fff;\n}\n.statistic-tpl li p {\n  margin-top: 10px;\n  margin-bottom: 20px;\n  font-size: 50px;\n  line-height: 50px;\n  font-weight: 300;\n}\n.statistic-tpl li:nth-child(1) {\n  background-color: #333333;\n}\n.statistic-tpl li:nth-child(2) {\n  background-color: #4a4a4a;\n}\n.statistic-tpl li:nth-child(3) {\n  background-color: #5f5f5f;\n}\n.statistic-tpl li:nth-child(4) {\n  background-color: #797979;\n}\n", ""]);
 
 	// exports
 

@@ -14,7 +14,6 @@ module.exports = BaseVue.extend({
         tpldata:Object
     },
     ready:function(){
-
     },
     data: function() {
         // 作用域数据结构
@@ -37,16 +36,27 @@ module.exports = BaseVue.extend({
                 data: record,
                 type: "GET",
                 success: function (res) {
-                    if(!res.data.result){
-                        alert(res.data.message);
+                    if(!res.result){
+                        self.renderNotice(res.message);
                         return;
                     }
-                    alert("发送成功!");
+                    self.renderNotice("Your message has been sent successfully.");
                     self.name = "";
                     self.email = "";
                     self.message = "";
                 }
             });
+        },
+        renderNotice:function (message) {
+            this.notification = new NotificationFx({
+                message : '<span class="icon icon-megaphone"></span><p>'+message+' Go <a href="#">check it out</a> now.</p>',
+                layout : 'bar',
+                effect : 'slidetop',
+                type : 'notice', // notice, warning or error
+                onClose : function() {
+                }
+            });
+            this.notification.show();
         }
     },
     filters:{
