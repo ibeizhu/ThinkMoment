@@ -19,18 +19,24 @@ export default class extends Base {
     async loginAction(){
         let username = this.get("username");
         let password = this.get("password");
-        if(!username || !password){
-            
+        if(username != "moment" || password != "123456"){
+            this.fail({
+                data:{
+                    msg:"用户名或者密码错误",
+                    result:false
+                }
+            });
         }
         let userInfo = {
-            userId:"user123",
-            userName:"Only"
+            userId:"123456",
+            userName:"moment"
         };
         // 写入session
         await this.session("userInfo", userInfo);
-        this.redirect("/business/index/index");
+        // this.redirect("/business/index/index");
         this.success({
-            msg:"Login in Success"
+            msg:"Login in Success",
+            result:true
         });
     }
     /*
