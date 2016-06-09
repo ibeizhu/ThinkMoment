@@ -75,6 +75,17 @@
 	    },
 	    ready:function(){
 	        this.renderParticlesBackground();
+	        if(isMobile){
+	            $(".main-tpl").css({
+	                "top":"50%",
+	                "left":"50%",
+	                "right":"inherit",
+	                "-webkit-transform":"translate(-50%,-50%)",
+	                "-moz-transform":"translate(-50%,-50%)",
+	                "-o-transform":"translate(-50%,-50%)",
+	                "transform":"translate(-50%,-50%)"
+	            });
+	        }
 	    },
 	    data: function() {
 	        // 作用域数据结构
@@ -277,7 +288,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #000;\n}\n.main-tpl {\n  position: absolute;\n  top: 35%;\n  right: 4%;\n  width: 400px;\n}\n.main-tpl .row {\n  padding: 10px 0;\n}\n.main-tpl .row input {\n  width: 300px;\n  padding: 10px;\n  font-size: 17px;\n  border: 1px solid #d3d2d7;\n  border-radius: 5px;\n  color: #fff;\n  background-color: transparent;\n  outline: none;\n}\n.main-tpl .row .login {\n  background-color: rgba(255, 255, 255, 0.3);\n  cursor: pointer;\n}\n.main-tpl .row .login:hover {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #000;\n}\n.main-tpl {\n  position: absolute;\n  top: 35%;\n  right: 8%;\n}\n.main-tpl .row {\n  padding: 10px 0;\n}\n.main-tpl .row input {\n  width: 300px;\n  padding: 10px;\n  font-size: 17px;\n  border: 1px solid #d3d2d7;\n  border-radius: 5px;\n  color: #fff;\n  background-color: transparent;\n  outline: none;\n}\n.main-tpl .row .login {\n  background-color: rgba(255, 255, 255, 0.3);\n  cursor: pointer;\n}\n.main-tpl .row .login:hover {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n", ""]);
 
 	// exports
 

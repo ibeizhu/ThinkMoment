@@ -11,6 +11,7 @@ export default class extends Base {
      * 显示登录页面
      */
     indexAction(){
+        this.assign("isMobile",checkMobile(this.userAgent()));
         return this.display();
     }
     /*

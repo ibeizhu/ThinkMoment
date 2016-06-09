@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3718d916-76c8-4481-adb3-f54c92c8c208" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/business/login/indexBak.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/js/lib/stats.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/particles.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/particles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/libs/plugin/particles/particles.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/main/mainTpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/webpack.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/controller/login.js" afterPath="$PROJECT_DIR$/src/business/controller/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/bootstrap/global.js" afterPath="$PROJECT_DIR$/src/common/bootstrap/global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/login/index.html" afterPath="$PROJECT_DIR$/view/business/login/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.pack.js" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" afterPath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" />
     </list>
     <ignored path="ThinkMoment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +35,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/business/login/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="270">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -62,23 +47,13 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
-                <element signature="e#1293#3956#0" expanded="false" />
-                <element signature="e#3995#5478#0" expanded="false" />
-                <marker date="1465481247000" expanded="false" signature="1217:5938" ph="{...}" />
+                <element signature="e#1691#4354#0" expanded="false" />
+                <element signature="e#4393#5876#0" expanded="false" />
+                <marker date="1465484932000" expanded="false" signature="1615:6336" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/business/controller/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,8 +71,18 @@
       <file leaf-file-name="mainTpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/mainTpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+            <state relative-caret-position="0">
+              <caret line="0" column="20" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -144,10 +129,11 @@
         <option value="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/index.html" />
         <option value="$PROJECT_DIR$/www/static/modules/business/login/index/entry.js" />
         <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/mainTpl.html" />
-        <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" />
-        <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" />
-        <option value="$PROJECT_DIR$/view/business/login/index.html" />
+        <option value="$PROJECT_DIR$/src/common/bootstrap/global.js" />
         <option value="$PROJECT_DIR$/src/business/controller/login.js" />
+        <option value="$PROJECT_DIR$/view/business/login/index.html" />
+        <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" />
+        <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" />
       </list>
     </option>
   </component>
@@ -508,45 +494,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="particles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkMoment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkMoment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="particles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
+              <option name="myItemId" value="cyzs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,18 +521,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="particles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -701,6 +641,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -853,12 +815,12 @@
       <workItem from="1465264610779" duration="967000" />
       <workItem from="1465304352435" duration="4597000" />
       <workItem from="1465351703612" duration="1559000" />
-      <workItem from="1465474035295" duration="5646000" />
+      <workItem from="1465474035295" duration="7138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26205000" />
+    <option name="totallyTimeSpent" value="27697000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -871,9 +833,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="23" width="1232" height="777" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -913,20 +875,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/static/libs/plugin/slider.revolution/jquery.themepunch.tools.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3165">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/libs/plugin/slider.revolution/jquery.themepunch.revolution.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3000">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/static/libs/plugin/handlebars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5565">
@@ -1259,48 +1207,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less">
+    <entry file="file://$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BrowserHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="-75">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/bootstrap/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="1046" column="40" selection-start-line="1046" selection-start-column="40" selection-end-line="1046" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/mainTpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+        <state relative-caret-position="0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js">
+    <entry file="file://$PROJECT_DIR$/src/business/controller/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="e#1293#3956#0" expanded="false" />
-            <element signature="e#3995#5478#0" expanded="false" />
-            <marker date="1465481247000" expanded="false" signature="1217:5938" ph="{...}" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/business/login/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="270">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/controller/login.js">
+    <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        <state relative-caret-position="255">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#1691#4354#0" expanded="false" />
+            <element signature="e#4393#5876#0" expanded="false" />
+            <marker date="1465484932000" expanded="false" signature="1615:6336" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           <folding />
         </state>
       </provider>

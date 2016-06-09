@@ -13,6 +13,17 @@ module.exports = BaseVue.extend({
     },
     ready:function(){
         this.renderParticlesBackground();
+        if(isMobile){
+            $(".main-tpl").css({
+                "top":"50%",
+                "left":"50%",
+                "right":"inherit",
+                "-webkit-transform":"translate(-50%,-50%)",
+                "-moz-transform":"translate(-50%,-50%)",
+                "-o-transform":"translate(-50%,-50%)",
+                "transform":"translate(-50%,-50%)"
+            });
+        }
     },
     data: function() {
         // 作用域数据结构
