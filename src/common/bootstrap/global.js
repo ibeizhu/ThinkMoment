@@ -1071,3 +1071,49 @@ global.get_file=async (file_id,field)=>{
     let file = await think.model('file', think.config("db")).find(file_id);
     return think.isEmpty(field) ? file : file[field];
 }
+
+/**
+ * 字符串加密/解密算法
+ * @type {{encrypt: (function()), decrypt: (function())}}
+ */
+global.StringSecurity={
+    /**
+     * 字符串加密
+     * @param str
+     * @param degist
+     * @returns {string}
+     */
+    encrypt:(str,degist) =>{
+        if(!str){
+            return false;
+        }
+        if(!degist){
+            degist = 8;
+        }
+        str += 'think';
+        let monyer = "";
+        for(let i=0;i<str.length;i++)
+            monyer+="\\"+str.charCodeAt(i).toString(degist);
+        return monyer;
+    },
+    /**
+     * 字符串解密
+     * @param str
+     * @param degist
+     * @returns {string}
+     */
+    decrypt:(str,degist) =>{
+        if(!str){
+            return false;
+        }
+        if(!degist){
+            degist = 8;
+        }
+        let monyer = "";
+        var s=str.split("\\");
+        for(let i=1;i<s.length;i++)
+            monyer+=String.fromCharCode(parseInt(s[i],degist));
+        monyer= monyer.replace('think','');
+        return monyer;
+    }
+}

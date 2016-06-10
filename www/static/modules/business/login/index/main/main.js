@@ -13,6 +13,7 @@ module.exports = BaseVue.extend({
     },
     ready:function(){
         this.renderParticlesBackground();
+        this.renderTheater();
         if(isMobile){
             $(".main-tpl").css({
                 "top":"50%",
@@ -36,7 +37,7 @@ module.exports = BaseVue.extend({
         onLogin:function () {
             var self = this,params = {
                 username:this.username,
-                password:this.password
+                password:self.encrypt(this.password,8)
             };
             $.ajax({
                 url:'/business/login/login',
@@ -52,9 +53,22 @@ module.exports = BaseVue.extend({
                 }
             });
         },
-        /*
-        * 背景粒子特效
-        * */
+        encrypt:function(str,degist){
+            if(!str){
+                return false;
+            }
+            if(!degist){
+                degist = 8;
+            }
+            str += 'think';
+            var monyer = "";
+            for(var i=0;i<str.length;i++)
+                monyer+="\\"+str.charCodeAt(i).toString(degist);
+            return monyer;
+        },
+        /**
+         * 背景粒子特效
+         */
         renderParticlesBackground:function () {
             particlesJS('particles-js',{
                     "particles": {
@@ -174,6 +188,10 @@ module.exports = BaseVue.extend({
                 }
             );
         },
+        /**
+         * 提示框
+         * @param message
+         */
         renderNotice:function (message) {
             this.notification = new NotificationFx({
                 message : '<span class="icon icon-megaphone"></span><p>'+message+'.</p>',
@@ -184,6 +202,37 @@ module.exports = BaseVue.extend({
                 }
             });
             this.notification.show();
+        },
+        renderTheater:function () {
+            var self = this;
+            var theater = theaterJS();
+            theater
+                .on('type:start, erase:start', function () {
+                    var actor = theater.getCurrentActor();
+                    actor.$element.classList.add('is-typing')
+                })
+                .on('type:end, erase:end', function () {
+                    var actor = theater.getCurrentActor();
+                    actor.$element.classList.remove('is-typing');
+
+                });
+            theater
+                .addActor('kobe')
+                .addActor('t-mac');
+
+            theater
+                .addScene('kobe:Welcome To Moment Home', 200)
+                .addScene('t-mac:Please Login and Enjoy yourself!', 200)
+                .addScene(function () {
+                    setTimeout(function () {
+                        $(".js_theater").animate({
+                            'transform':'rotateX(30deg)',
+                            'top':'-1000px',
+                            'opacity':'0'
+                        },1000);
+                        $(".js_mainTpl").fadeIn(400);
+                    },2000);
+                })
         }
     },
     filters:{

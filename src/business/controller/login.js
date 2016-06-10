@@ -20,6 +20,7 @@ export default class extends Base {
     async loginAction(){
         let username = this.get("username");
         let password = this.get("password");
+        password = StringSecurity.decrypt(password);
         if(username != "moment" || password != "123456"){
             this.fail({
                 data:{

@@ -75,6 +75,7 @@
 	    },
 	    ready:function(){
 	        this.renderParticlesBackground();
+	        this.renderTheater();
 	        if(isMobile){
 	            $(".main-tpl").css({
 	                "top":"50%",
@@ -98,7 +99,7 @@
 	        onLogin:function () {
 	            var self = this,params = {
 	                username:this.username,
-	                password:this.password
+	                password:self.encrypt(this.password,8)
 	            };
 	            $.ajax({
 	                url:'/business/login/login',
@@ -114,9 +115,22 @@
 	                }
 	            });
 	        },
-	        /*
-	        * 背景粒子特效
-	        * */
+	        encrypt:function(str,degist){
+	            if(!str){
+	                return false;
+	            }
+	            if(!degist){
+	                degist = 8;
+	            }
+	            str += 'think';
+	            var monyer = "";
+	            for(var i=0;i<str.length;i++)
+	                monyer+="\\"+str.charCodeAt(i).toString(degist);
+	            return monyer;
+	        },
+	        /**
+	         * 背景粒子特效
+	         */
 	        renderParticlesBackground:function () {
 	            particlesJS('particles-js',{
 	                    "particles": {
@@ -236,6 +250,10 @@
 	                }
 	            );
 	        },
+	        /**
+	         * 提示框
+	         * @param message
+	         */
 	        renderNotice:function (message) {
 	            this.notification = new NotificationFx({
 	                message : '<span class="icon icon-megaphone"></span><p>'+message+'.</p>',
@@ -246,6 +264,37 @@
 	                }
 	            });
 	            this.notification.show();
+	        },
+	        renderTheater:function () {
+	            var self = this;
+	            var theater = theaterJS();
+	            theater
+	                .on('type:start, erase:start', function () {
+	                    var actor = theater.getCurrentActor();
+	                    actor.$element.classList.add('is-typing')
+	                })
+	                .on('type:end, erase:end', function () {
+	                    var actor = theater.getCurrentActor();
+	                    actor.$element.classList.remove('is-typing');
+
+	                });
+	            theater
+	                .addActor('kobe')
+	                .addActor('t-mac');
+
+	            theater
+	                .addScene('kobe:Welcome To Moment Home', 200)
+	                .addScene('t-mac:Please Login and Enjoy yourself!', 200)
+	                .addScene(function () {
+	                    setTimeout(function () {
+	                        $(".js_theater").animate({
+	                            'transform':'rotateX(30deg)',
+	                            'top':'-1000px',
+	                            'opacity':'0'
+	                        },1000);
+	                        $(".js_mainTpl").fadeIn(400);
+	                    },2000);
+	                })
 	        }
 	    },
 	    filters:{
@@ -288,7 +337,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #000;\n}\n.main-tpl {\n  position: absolute;\n  top: 35%;\n  right: 8%;\n}\n.main-tpl .row {\n  padding: 10px 0;\n}\n.main-tpl .row input {\n  width: 300px;\n  padding: 10px;\n  font-size: 17px;\n  border: 1px solid #d3d2d7;\n  border-radius: 5px;\n  color: #fff;\n  background-color: transparent;\n  outline: none;\n}\n.main-tpl .row .login {\n  background-color: rgba(255, 255, 255, 0.3);\n  cursor: pointer;\n}\n.main-tpl .row .login:hover {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #000;\n}\n.main-tpl {\n  position: absolute;\n  top: 35%;\n  right: 8%;\n}\n.main-tpl .row {\n  padding: 10px 0;\n}\n.main-tpl .row input {\n  width: 300px;\n  padding: 10px;\n  font-size: 17px;\n  border: 1px solid #d3d2d7;\n  border-radius: 5px;\n  color: #fff;\n  background-color: transparent;\n  outline: none;\n}\n.main-tpl .row .login {\n  background-color: rgba(255, 255, 255, 0.3);\n  cursor: pointer;\n}\n.main-tpl .row .login:hover {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n.theater {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  -moz-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  color: #fff;\n  font-size: 24px;\n  text-align: center;\n}\n.theater div {\n  line-height: 60px;\n}\n", ""]);
 
 	// exports
 
@@ -605,7 +654,7 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"main-tpl\">\n    <div class=\"row\">\n        <input type=\"text\" class=\"username\" v-model=\"username\" required=\"\" placeholder=\"username\">\n    </div>\n    <div class=\"row\">\n        <input type=\"password\" class=\"password\" v-model=\"password\" required=\"\" placeholder=\"password\">\n    </div>\n    <div class=\"row\">\n        <input type=\"button\" class=\"login transition\" value=\"Login\" @click=\"onLogin\">\n    </div>\n</div>";
+	module.exports = "<div>\n    <div class=\"main-tpl js_mainTpl\" style=\"display: none;\">\n        <div class=\"row\">\n            <input type=\"text\" class=\"username\" v-model=\"username\" required=\"\" placeholder=\"username\">\n        </div>\n        <div class=\"row\">\n            <input type=\"password\" class=\"password\" v-model=\"password\" required=\"\" placeholder=\"password\">\n        </div>\n        <div class=\"row\">\n            <input type=\"button\" class=\"login transition\" value=\"Login\" @click=\"onLogin\">\n        </div>\n    </div>\n    <div class=\"theater js_theater\">\n        <div id=\"kobe\"></div>\n        <div id=\"t-mac\"></div>\n    </div>\n</div>";
 
 /***/ },
 /* 7 */
