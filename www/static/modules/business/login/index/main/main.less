@@ -6,8 +6,14 @@ body{
   top:35%;
   right:8%;
   .row{
-    padding: 10px 0;
+    height:40px;
+    min-width: 300px;
+    margin: 20px 0;
+    position: relative;
     input{
+      position: absolute;
+      top:0;
+      left:0;
       width:300px;
       padding: 10px;
       font-size: 17px;
@@ -16,6 +22,7 @@ body{
       color:#fff;
       background-color: transparent;
       outline:none;
+      display: none;
     }
     .login{
       background-color:rgba(255,255,255,0.3);
@@ -23,6 +30,27 @@ body{
     }
     .login:hover{
       background-color:rgba(255,255,255,0.6);
+    }
+    .login:active{
+      background-color:rgba(255,255,255,0.6);
+    }
+    .first{
+      animation: first 1.5s ease-in;
+      -webkit-animation: first 1.5s ease-in;
+      -moz-animation: first 1.5s ease-in;
+      -o-animation: first 1.5s ease-in;
+    }
+    .second{
+      animation: second 1.5s ease-in;
+      -webkit-animation: second 1.5s ease-in;
+      -moz-animation: second 1.5s ease-in;
+      -o-animation: second 1.5s ease-in;
+    }
+    .third{
+      animation: third .5s ease-in;
+      -webkit-animation: third .5s ease-in;
+      -moz-animation: third .5s ease-in;
+      -o-animation: third .5s ease-in;
     }
   }
 
@@ -40,5 +68,68 @@ body{
   text-align: center;
   div{
     line-height: 60px;
+  }
+}
+
+@-webkit-keyframes first {
+  from   {top:-1000%;left:-1000%;}
+  to {top:0;left:0;}
+}
+@-moz-keyframes first {
+  from   {top:-1000%;left:-1000%;}
+  to {top:0;left:0;}
+}
+@-o-keyframes first {
+  from   {top:-1000%;left:-1000%;}
+  to {top:0;left:0;}
+}
+@keyframes first {
+  from   {top:-1000%;left:-1000%;}
+  to {top:0;left:0;}
+}
+
+@-webkit-keyframes second {
+  from   {top:-1000%;right:-500%;}
+  to {top:0;left:0;}
+}
+@-moz-keyframes second {
+  from   {top:-1000%;right:-500%;}
+  to {top:0;left:0;}
+}
+@-o-keyframes second {
+  from   {top:-1000%;right:-500%;}
+  to {top:0;left:0;}
+}
+@keyframes second {
+  from   {top:-1000%;right:-500%;}
+  to {top:0;left:0;}
+}
+
+@-webkit-keyframes third {
+  from   {top:1000%;right:-1500%;}
+  to {top:0;left:0;}
+}
+@-moz-keyframes third {
+  from   {top:1000%;right:-1500%;}
+  to {top:0;left:0;}
+}
+@-o-keyframes third {
+  from   {top:1000%;right:-1500%;}
+  to {top:0;left:0;}
+}
+@keyframes third {
+  from   {top:1000%;right:-1500%;}
+  to {top:0;left:0;}
+}
+
+@media screen and (max-width:600px){
+  .main-tpl{
+    top:50%;
+    left:50%;
+    right:inherit;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
   }
 }

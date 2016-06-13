@@ -1,10 +1,10 @@
 <div>
-    <div class="main-tpl js_mainTpl" style="display: none;">
+    <div class="main-tpl js_mainTpl">
         <div class="row">
-            <input type="text" class="username" v-model="username" required="" placeholder="username">
+            <input type="text" class="username" v-model="username" @keyup.enter="onLogin" required="" placeholder="username">
         </div>
         <div class="row">
-            <input type="password" class="password" v-model="password" required="" placeholder="password">
+            <input type="password" class="password" v-model="password" @keyup.enter="onLogin" required="" placeholder="password">
         </div>
         <div class="row">
             <input type="button" class="login transition" value="Login" @click="onLogin">

@@ -76,17 +76,6 @@
 	    ready:function(){
 	        this.renderParticlesBackground();
 	        this.renderTheater();
-	        if(isMobile){
-	            $(".main-tpl").css({
-	                "top":"50%",
-	                "left":"50%",
-	                "right":"inherit",
-	                "-webkit-transform":"translate(-50%,-50%)",
-	                "-moz-transform":"translate(-50%,-50%)",
-	                "-o-transform":"translate(-50%,-50%)",
-	                "transform":"translate(-50%,-50%)"
-	            });
-	        }
 	    },
 	    data: function() {
 	        // 作用域数据结构
@@ -96,7 +85,15 @@
 	        }
 	    },
 	    methods: {
-	        onLogin:function () {
+	        onLogin:function (e) {
+	            if(!this.username){
+	                this.renderNotice("username can't be null");
+	                return;
+	            }
+	            if(!this.password){
+	                this.renderNotice("password can't be null");
+	                return;
+	            }
 	            var self = this,params = {
 	                username:this.username,
 	                password:self.encrypt(this.password,8)
@@ -129,7 +126,7 @@
 	            return monyer;
 	        },
 	        /**
-	         * 背景粒子特效
+	         * render particles animate background
 	         */
 	        renderParticlesBackground:function () {
 	            particlesJS('particles-js',{
@@ -251,7 +248,7 @@
 	            );
 	        },
 	        /**
-	         * 提示框
+	         * render notice plugin
 	         * @param message
 	         */
 	        renderNotice:function (message) {
@@ -289,12 +286,30 @@
 	                    setTimeout(function () {
 	                        $(".js_theater").animate({
 	                            'transform':'rotateX(30deg)',
-	                            'top':'-1000px',
+	                            'top':'-2000px',
 	                            'opacity':'0'
-	                        },1000);
-	                        $(".js_mainTpl").fadeIn(400);
-	                    },2000);
-	                })
+	                        },2000);
+	                        self.showLoginPart();
+	                    },1200);
+	                });
+	        },
+	        /**
+	         * login part animate show
+	         */
+	        showLoginPart:function () {
+	            var count = 1,self = this;
+	            self.timerInterval = setInterval(function () {
+	                if(count == 1){
+	                    $(".username").show().addClass("first");
+	                }else if(count == 2){
+	                    $(".password").show().addClass("second");
+	                }else if(count == 3){
+	                    $(".login").show().addClass("third");
+	                }else{
+	                    window.clearInterval(self.timerInterval);
+	                }
+	                count++;
+	            },500);
 	        }
 	    },
 	    filters:{
@@ -337,7 +352,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #000;\n}\n.main-tpl {\n  position: absolute;\n  top: 35%;\n  right: 8%;\n}\n.main-tpl .row {\n  padding: 10px 0;\n}\n.main-tpl .row input {\n  width: 300px;\n  padding: 10px;\n  font-size: 17px;\n  border: 1px solid #d3d2d7;\n  border-radius: 5px;\n  color: #fff;\n  background-color: transparent;\n  outline: none;\n}\n.main-tpl .row .login {\n  background-color: rgba(255, 255, 255, 0.3);\n  cursor: pointer;\n}\n.main-tpl .row .login:hover {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n.theater {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  -moz-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  color: #fff;\n  font-size: 24px;\n  text-align: center;\n}\n.theater div {\n  line-height: 60px;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #000;\n}\n.main-tpl {\n  position: absolute;\n  top: 35%;\n  right: 8%;\n}\n.main-tpl .row {\n  height: 40px;\n  min-width: 300px;\n  margin: 20px 0;\n  position: relative;\n}\n.main-tpl .row input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 300px;\n  padding: 10px;\n  font-size: 17px;\n  border: 1px solid #d3d2d7;\n  border-radius: 5px;\n  color: #fff;\n  background-color: transparent;\n  outline: none;\n  display: none;\n}\n.main-tpl .row .login {\n  background-color: rgba(255, 255, 255, 0.3);\n  cursor: pointer;\n}\n.main-tpl .row .login:hover {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n.main-tpl .row .login:active {\n  background-color: rgba(255, 255, 255, 0.6);\n}\n.main-tpl .row .first {\n  animation: first 1.5s ease-in;\n  -webkit-animation: first 1.5s ease-in;\n  -moz-animation: first 1.5s ease-in;\n  -o-animation: first 1.5s ease-in;\n}\n.main-tpl .row .second {\n  animation: second 1.5s ease-in;\n  -webkit-animation: second 1.5s ease-in;\n  -moz-animation: second 1.5s ease-in;\n  -o-animation: second 1.5s ease-in;\n}\n.main-tpl .row .third {\n  animation: third 0.5s ease-in;\n  -webkit-animation: third 0.5s ease-in;\n  -moz-animation: third 0.5s ease-in;\n  -o-animation: third 0.5s ease-in;\n}\n.theater {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  -moz-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  color: #fff;\n  font-size: 24px;\n  text-align: center;\n}\n.theater div {\n  line-height: 60px;\n}\n@-webkit-keyframes first {\n  from {\n    top: -1000%;\n    left: -1000%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-moz-keyframes first {\n  from {\n    top: -1000%;\n    left: -1000%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-o-keyframes first {\n  from {\n    top: -1000%;\n    left: -1000%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@keyframes first {\n  from {\n    top: -1000%;\n    left: -1000%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-webkit-keyframes second {\n  from {\n    top: -1000%;\n    right: -500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-moz-keyframes second {\n  from {\n    top: -1000%;\n    right: -500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-o-keyframes second {\n  from {\n    top: -1000%;\n    right: -500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@keyframes second {\n  from {\n    top: -1000%;\n    right: -500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-webkit-keyframes third {\n  from {\n    top: 1000%;\n    right: -1500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-moz-keyframes third {\n  from {\n    top: 1000%;\n    right: -1500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@-o-keyframes third {\n  from {\n    top: 1000%;\n    right: -1500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@keyframes third {\n  from {\n    top: 1000%;\n    right: -1500%;\n  }\n  to {\n    top: 0;\n    left: 0;\n  }\n}\n@media screen and (max-width: 600px) {\n  .main-tpl {\n    top: 50%;\n    left: 50%;\n    right: inherit;\n    -webkit-transform: translate(-50%, -50%);\n    -moz-transform: translate(-50%, -50%);\n    -o-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n  }\n}\n", ""]);
 
 	// exports
 
@@ -654,7 +669,7 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n    <div class=\"main-tpl js_mainTpl\" style=\"display: none;\">\n        <div class=\"row\">\n            <input type=\"text\" class=\"username\" v-model=\"username\" required=\"\" placeholder=\"username\">\n        </div>\n        <div class=\"row\">\n            <input type=\"password\" class=\"password\" v-model=\"password\" required=\"\" placeholder=\"password\">\n        </div>\n        <div class=\"row\">\n            <input type=\"button\" class=\"login transition\" value=\"Login\" @click=\"onLogin\">\n        </div>\n    </div>\n    <div class=\"theater js_theater\">\n        <div id=\"kobe\"></div>\n        <div id=\"t-mac\"></div>\n    </div>\n</div>";
+	module.exports = "<div>\n    <div class=\"main-tpl js_mainTpl\">\n        <div class=\"row\">\n            <input type=\"text\" class=\"username\" v-model=\"username\" @keyup.enter=\"onLogin\" required=\"\" placeholder=\"username\">\n        </div>\n        <div class=\"row\">\n            <input type=\"password\" class=\"password\" v-model=\"password\" @keyup.enter=\"onLogin\" required=\"\" placeholder=\"password\">\n        </div>\n        <div class=\"row\">\n            <input type=\"button\" class=\"login transition\" value=\"Login\" @click=\"onLogin\">\n        </div>\n    </div>\n    <div class=\"theater js_theater\">\n        <div id=\"kobe\"></div>\n        <div id=\"t-mac\"></div>\n    </div>\n</div>";
 
 /***/ },
 /* 7 */

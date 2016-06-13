@@ -30,7 +30,7 @@ export default class extends Base {
             });
         }
         let userInfo = {
-            userId:"123456",
+            userId:"10000",
             userName:"moment"
         };
         // 写入session

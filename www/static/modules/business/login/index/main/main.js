@@ -14,17 +14,6 @@ module.exports = BaseVue.extend({
     ready:function(){
         this.renderParticlesBackground();
         this.renderTheater();
-        if(isMobile){
-            $(".main-tpl").css({
-                "top":"50%",
-                "left":"50%",
-                "right":"inherit",
-                "-webkit-transform":"translate(-50%,-50%)",
-                "-moz-transform":"translate(-50%,-50%)",
-                "-o-transform":"translate(-50%,-50%)",
-                "transform":"translate(-50%,-50%)"
-            });
-        }
     },
     data: function() {
         // 作用域数据结构
@@ -34,7 +23,15 @@ module.exports = BaseVue.extend({
         }
     },
     methods: {
-        onLogin:function () {
+        onLogin:function (e) {
+            if(!this.username){
+                this.renderNotice("username can't be null");
+                return;
+            }
+            if(!this.password){
+                this.renderNotice("password can't be null");
+                return;
+            }
             var self = this,params = {
                 username:this.username,
                 password:self.encrypt(this.password,8)
@@ -67,7 +64,7 @@ module.exports = BaseVue.extend({
             return monyer;
         },
         /**
-         * 背景粒子特效
+         * render particles animate background
          */
         renderParticlesBackground:function () {
             particlesJS('particles-js',{
@@ -189,7 +186,7 @@ module.exports = BaseVue.extend({
             );
         },
         /**
-         * 提示框
+         * render notice plugin
          * @param message
          */
         renderNotice:function (message) {
@@ -227,12 +224,30 @@ module.exports = BaseVue.extend({
                     setTimeout(function () {
                         $(".js_theater").animate({
                             'transform':'rotateX(30deg)',
-                            'top':'-1000px',
+                            'top':'-2000px',
                             'opacity':'0'
-                        },1000);
-                        $(".js_mainTpl").fadeIn(400);
-                    },2000);
-                })
+                        },2000);
+                        self.showLoginPart();
+                    },1200);
+                });
+        },
+        /**
+         * login part animate show
+         */
+        showLoginPart:function () {
+            var count = 1,self = this;
+            self.timerInterval = setInterval(function () {
+                if(count == 1){
+                    $(".username").show().addClass("first");
+                }else if(count == 2){
+                    $(".password").show().addClass("second");
+                }else if(count == 3){
+                    $(".login").show().addClass("third");
+                }else{
+                    window.clearInterval(self.timerInterval);
+                }
+                count++;
+            },500);
         }
     },
     filters:{

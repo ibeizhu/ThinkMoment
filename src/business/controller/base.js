@@ -100,7 +100,7 @@ export default class extends think.controller.base {
             },
             {
                 controller:"index",
-                actions:["index"]
+                actions:[] //["index"]
             }
         ];
         let flag = false;
