@@ -11,6 +11,9 @@ module.exports = Vue.extend({
                 return true;
             }
             return false;
+        },
+        getCloneObj:function (obj) {
+            return JSON.parse(JSON.stringify(obj));
         }
     },
     filters:{
