@@ -62,8 +62,8 @@ CREATE TABLE `moment_user`(
      `address` text COMMENT '地址',
      `introduction` text COMMENT '个人简介',
      `motto` text COMMENT '座右铭',
-     `create_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
-     `update_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
+     `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+     `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
     PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=100000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='用户表';
 
@@ -78,8 +78,8 @@ CREATE TABLE `moment_contact`(
     `name` varchar(20) NOT NULL DEFAULT '' COMMENT '姓名',
     `email` varchar(30) NOT NULL DEFAULT '' COMMENT '邮箱地址',
     `message` text COMMENT '消息',
-    `create_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
-    `update_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
     PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=200000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='联系表';
 
@@ -95,8 +95,8 @@ CREATE TABLE `moment_work`(
     `detail` text COMMENT '简介',
     `startTime` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
     `endTime` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '结束时间',
-    `create_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
-    `update_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
     PRIMARY KEY (`id`)
 )ENGINE=MyISAM AUTO_INCREMENT=300000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='工作简历表';
 
@@ -110,7 +110,35 @@ CREATE TABLE `moment_statistic`(
     `contact` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '联系我人数',
     `day_visit` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '当日访问人数',
     `total_visit` INT(11) unsigned NOT NULL DEFAULT 0 COMMENT '总访问人数',
-    `create_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
-    `update_time` bigint(13) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
     PRIMARY KEY (`id`)
 )ENGINE=MyISAM AUTO_INCREMENT=400000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='统计表';
+
+-- ----------------------------
+--  Table structure for `moment_chatrelation`
+-- ----------------------------
+DROP TABLE IF EXISTS `moment_chatrelation`;
+CREATE TABLE `moment_chatrelation`(
+    `relationId` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键聊天关系id',
+    `collectionId` varchar(30) NOT NULL DEFAULT '' COMMENT '聊天对象的id集合体',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
+    PRIMARY KEY (`relationId`)
+)ENGINE=MyISAM AUTO_INCREMENT=500000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='聊天关系表';
+
+-- ----------------------------
+--  Table structure for `moment_chat`
+-- ----------------------------
+DROP TABLE IF EXISTS `moment_chat`;
+CREATE TABLE `moment_chat`(
+    `chatId` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键聊天id',
+    `relationId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '关系id',
+    `speakerId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '说话人',
+    `audienceId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '聆听者',
+    `message` text COMMENT '聊天内容',
+    `status` tinyint(2) NOT NULL DEFAULT 0 COMMENT '未读状态',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
+    PRIMARY KEY (`chatId`)
+)ENGINE=MyISAM AUTO_INCREMENT=600000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='聊天表';

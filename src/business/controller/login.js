@@ -21,7 +21,8 @@ export default class extends Base {
         let username = this.get("username");
         let password = this.get("password");
         password = StringSecurity.decrypt(password);
-        if(username != "moment" || password != "123456"){
+        let user = await this.model("user").where({account:username,password:password}).find();
+        if(think.isEmpty(user)){
             this.fail({
                 data:{
                     msg:"用户名或者密码错误",
@@ -30,12 +31,12 @@ export default class extends Base {
             });
         }
         let userInfo = {
-            userId:"10000",
-            userName:"moment"
+            userId:user.id,
+            account:user.account,
+            userName:user.name
         };
         // 写入session
         await this.session("userInfo", userInfo);
-        // this.redirect("/business/index/index");
         this.success({
             msg:"Login in Success",
             result:true

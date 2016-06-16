@@ -8,7 +8,7 @@ export default class extends think.controller.base {
     this.leftNavData = {};
   }
   /*
-   * 检查session
+   * 魔术方法,action之前调用
    * */
   async __before(){
     // // 头部菜单数据
@@ -18,8 +18,10 @@ export default class extends think.controller.base {
       await this.filterBlankControllerActions();
       this.setEntryJsPath();
   }
+  /*
+  * 设置主人口js文件(entry.pack.js or entry.min.js)
+  * */
   setEntryJsPath(){
-      // jsDebug js调试开关
       // TODO Moment js文件路径待改为build路径
       let jsDebug = this.http.get("jsDebug");
       let [packJs,uglifyJs] = ['entry.pack.js','entry.min.js'];
@@ -30,67 +32,9 @@ export default class extends think.controller.base {
           this.entryJs = `/static/modules/business/${ this.http.controller }/${ this.http.action }/${ uglifyJs }`;
       }
   }
-  // /*
-  //  * 请求头部接口，获取头部导航栏数据
-  //  * */
-  // async getTopMenuData (){
-  //   // TODO Moment 获取接口
-  //   let _param =  {
-  //     "method": 'nav.get',
-  //     "model[0]": 'initData',
-  //     "model[1]": 'menu',
-  //     "model[2]": 'topAdvertisement',
-  //     "model[3]": 'alert'
-  //   };
-  //   let result = await cyzsRequest.get(null,_param);
-  //   return result.data.menu;
-  // }
-  // /*
-  //  * 请求左侧导航接口，获取左侧导航栏数据
-  //  * */
-  // getLeftNavData(){
-  //   return {
-  //     list:[
-  //       {
-  //         link:"123123",
-  //         isSelected:1,
-  //         dataType:"1",
-  //         name:"商品1"
-  //       },
-  //       {
-  //         link:"123123",
-  //         isSelected:1,
-  //         dataType:"1",
-  //         name:"商品2"
-  //       },
-  //       {
-  //         link:"123123",
-  //         isSelected:1,
-  //         dataType:"1",
-  //         name:"商品3"
-  //       },
-  //       {
-  //         link:"123123",
-  //         isSelected:1,
-  //         dataType:"1",
-  //         name:"商品4"
-  //       },
-  //       {
-  //         link:"123123",
-  //         isSelected:1,
-  //         dataType:"1",
-  //         name:"商品5"
-  //       },
-  //       {
-  //         link:"123123",
-  //         isSelected:1,
-  //         dataType:"1",
-  //         name:"商品6"
-  //       }
-  //     ]
-  //   }
-  // }
-
+    /*
+     * 过滤控制器action白名单
+     * */
     async filterBlankControllerActions() {
         let [currentController,currentAction] = [this.http.controller,this.http.action];
         let blankActions = [
@@ -98,9 +42,13 @@ export default class extends think.controller.base {
                 controller:"login",
                 actions:["index","login"]
             },
+            // {
+            //     controller:"index",
+            //     actions:["index"]
+            // },
             {
-                controller:"index",
-                actions:[] //["index"]
+                controller:"chat",
+                actions:["test","push","send","show"]
             }
         ];
         let flag = false;
@@ -115,10 +63,28 @@ export default class extends think.controller.base {
         if(!flag){
             let userInfo = await this.session("userInfo");
             if(think.isEmpty(userInfo)){
-                return this.redirect("/business/login/index");
+                if(this.isAjax()){
+                    this.error('NO_LOGIN');
+                }else{
+                    return this.redirect("/business/login/index");
+                }
             }
         }
     }
-
+    // /*
+    //  * 请求头部接口，获取头部导航栏数据
+    //  * */
+    // async getTopMenuData (){
+    //   // TODO Moment 获取接口
+    //   let _param =  {
+    //     "method": 'nav.get',
+    //     "model[0]": 'initData',
+    //     "model[1]": 'menu',
+    //     "model[2]": 'topAdvertisement',
+    //     "model[3]": 'alert'
+    //   };
+    //   let result = await cyzsRequest.get(null,_param);
+    //   return result.data.menu;
+    // }
 
 }
