@@ -3,54 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Chat</title>
-    <script type="text/javascript" src="/static/libs/core/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
-    <script>
-        var msg = {
-            relationId:500000+"",
-            speakerId:100000,
-            audienceId:100001,
-            message:"我正在家里写代码呢"
-        };
-        Pusher.logToConsole = true;
-        var pusher = new Pusher('f04759682e5fa7e8ae8c', {
-            encrypted: true
-        });
-
-        var channel = pusher.subscribe(msg.relationId);
-        channel.bind('moment-push', function(data) {
-            console.log(data);
-            $(".js_chatList").append("<p style='line-height: 40px;background: #ccc;color:#fff;'>"+data.message+"</p>")
-        });
-    </script>
+    <link rel="stylesheet" type="text/css" href="/static/libs/styles/initial.css">
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            overflow: hidden;
+        }
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #4d4d4d;
+            font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
+            /*background: #f5f5f5 url('dist/images/bg.jpg') no-repeat center;*/
+            background: #f5f5f5;
+            background-size: cover;
+            font-smoothing: antialiased;
+        }
+        ul {
+            list-style: none;
+        }
+        #chat {
+            margin: 20px auto;
+            width: 800px;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
-<h2>Chat Room</h2>
-<div>
-    <button class="js_send">发送消息</button>
-</div>
-<div class="js_chatList">
-
-</div>
-<script>
-    $(function () {
-        var msg = {
-            relationId:500000,
-            speakerId:100000,
-            audienceId:100001,
-            message:"你好你好"
-        };
-        $(".js_send").click(function () {
-            $.ajax({
-                url:"/business/chat/send",
-                type:"POST",
-                data:msg,
-                success:function (response) {
-                    alert(response.data.message);
-                }
-            });
-        });
-    })
-</script>
+    <div class="js_pageWrap" id="chat"></div>
+    <script type="text/javascript" src="/static/libs/core/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/libs/core/vue/1.0/vue.min.js"></script>
+    <script type="text/javascript" src="<%= controller.entryJs %>"></script>
 </body>
 </html>

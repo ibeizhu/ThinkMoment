@@ -5,6 +5,7 @@
 
 import Base from './base.js';
 import Pusher from 'pusher';
+import _ from 'underscore';
 
 export default class extends Base {
     /**
@@ -19,19 +20,41 @@ export default class extends Base {
     showAction(){
         return this.display();
     }
-    pushAction(){
-        let msg = this.get("msg");
-        if(think.isEmpty(msg)){
-            msg = "Hello!";
-        }
-        this.messagePusher.trigger('moment_channel', 'my_event', {
-            "message": msg
-        });
 
-        this.success({
-            result:true,
-            message:"推送成功!"
-        });
+    /**
+     * 获取对话列表
+     */
+    async userlistAction(){
+        let userId = this.get("userId");
+        let loginUser  = await this.session("userInfo");
+        if(userId == loginUser.userId){
+            return this.fail("user id error");
+        }
+        let list = await this.model("chatrelation").field("relationId,collectionId").where({collectionId:{'like':'%' + loginUser.userId + '%'}}).select();
+        let relationId,relationIndex;
+        if(think.isEmpty(userId)){
+            if(list && list[0]){
+                relationId = list[0].relationId;
+                let chatList = await this.model("chat").where({relationId:relationId}).select();
+                list[0].chatList = chatList;
+            }else{
+                list = {};
+            }
+        }else{
+            _.each(list,function(item,index){
+                item.chatList = {};
+                if(item.collectionId.indexOf(userId) > -1){
+                    relationId = item.relationId;
+                    relationIndex = index;
+                }
+            });
+            if(typeof relationIndex == 'undefined'){
+                return this.fail("user id error");
+            }
+            let chatList = await this.model("chat").where({relationId:relationId}).select();
+            list[relationIndex].chatList = chatList;
+        }
+        return this.success(list);
     }
 
     /**
@@ -76,28 +99,27 @@ export default class extends Base {
      * 推送消息
      * @param msg 消息
      */
-    pushMessage(msg){
-        let pushMessage = {
-            speakerId:"123",
-            audienceId:"234",
-            message:msg
-        };
-        this.messagePusher.trigger('moment_channel', 'my_event', pushMessage);
+    pushMessage(params){
+        if(!params.relationId){
+            return;
+        }
+        let pushevent = 'moment-push';
+        this.messagePusher.trigger(params.relationId, pushevent, params);
     }
-    async addmsgAction(){
-        let msg = {
-            // chatId:"",
-            relationId:500000,
-            speakerId:100000,
-            audienceId:100001,
-            message:"我正在家里写代码呢",
-            status:0,
-            create_time:new Date().getTime(),
-            update_time:new Date().getTime()
-        };
-        let chatId = await this.model("chat").add(msg);
-        this.success({chatId:chatId});
-    }
+    // async addmsgAction(){
+    //     let msg = {
+    //         // chatId:"",
+    //         relationId:500002,
+    //         speakerId:100000,
+    //         audienceId:100003,
+    //         message:"if you recieve this message , reply me",
+    //         status:0,
+    //         create_time:new Date().getTime(),
+    //         update_time:new Date().getTime()
+    //     };
+    //     let chatId = await this.model("chat").add(msg);
+    //     this.success({chatId:chatId});
+    // }
     async getmsgAction(){
         let list = await this.model("chat").select();
         this.success(list);

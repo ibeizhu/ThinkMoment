@@ -1,0 +1,10 @@
+<div>
+    <div class="sidebar">
+        <card :user="user" :search.sync="search"></card>
+        <list :user-list="userList" :session="session" :session-index.sync="sessionIndex" :search="search"></list>
+    </div>
+    <div class="main">
+        <message :session="session" :user="user" :user-list="userList"></message>
+        <text :session="session"></text>
+    </div>
+</div>
