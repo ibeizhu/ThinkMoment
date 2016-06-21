@@ -14,7 +14,7 @@ export default class extends Base {
             account:"Iverson",
             password:"iverson@123",
             name:"Allen Iverson",
-            avatar:"/static/images/avatar.jpg",
+            avatar:"/static/build/images/avatar.jpg",
             position:"NBA Start",
             phone:"13123456711",
             email:"iverson@nba.com",

@@ -1,9 +1,8 @@
 /**
  * Created by Moment on 16/5/28.
  */
-var Vue = require("vue");
-var moment = require("moment");
-
+// var Vue = require("vue");
+var Util = require("../js/tools/Util");
 module.exports = Vue.extend({
     methods: {
         isNullOrEmpty:function(obj){
@@ -18,7 +17,7 @@ module.exports = Vue.extend({
     },
     filters:{
         formatDate:function (date,format) {
-            return moment(date*1000).format(format);
+            return Util.formatDate(date,format);
         }
     }
 });

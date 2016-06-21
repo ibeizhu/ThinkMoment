@@ -9,3 +9,5 @@ node_modules/*
 npm-debug.log
 app/*
 runtime/*
+www/static/build
+www/static/build/*

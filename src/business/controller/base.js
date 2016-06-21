@@ -22,14 +22,14 @@ export default class extends think.controller.base {
   * 设置主人口js文件(entry.pack.js or entry.min.js)
   * */
   setEntryJsPath(){
-      // TODO Moment js文件路径待改为build路径
       let jsDebug = this.http.get("jsDebug");
       let [packJs,uglifyJs] = ['entry.pack.js','entry.min.js'];
       let isLocalHost = this.http.hostname.indexOf("127.0.0.1") > -1?true:false;
+      this.mediaPath = '/static/build/';
       if(!think.isEmpty(jsDebug) || isLocalHost){
-          this.entryJs = `/static/modules/business/${ this.http.controller }/${ this.http.action }/${ packJs }`;
+          this.entryJs = `/static/build/modules/business/${ this.http.controller }/${ this.http.action }/${ packJs }`;
       }else{
-          this.entryJs = `/static/modules/business/${ this.http.controller }/${ this.http.action }/${ uglifyJs }`;
+          this.entryJs = `/static/build/modules/business/${ this.http.controller }/${ this.http.action }/${ uglifyJs }`;
       }
   }
     /*

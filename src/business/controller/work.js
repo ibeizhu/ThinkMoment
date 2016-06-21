@@ -12,7 +12,7 @@ export default class extends Base {
         let record = {
             user_id:100000,
             company:"MicroSoft",
-            image:"/static/images/work"+count + ".jpg",
+            image:"/static/build/images/work"+count + ".jpg",
             detail:"科比是NBA最好的得分手之一，突破、投篮、罚球、三分球他都驾轻就熟，几乎没有进攻盲区，单场比赛81分的个人纪录就有力地证明了这一点。除了疯狂的得分外，科比的组织能力也很出众，经常担任球队进攻的第一发起人。另外科比还是联盟中最好的防守人之一，贴身防守非常具有压迫性。",
             startTime:(new Date()).getTime(),
             endTime:(new Date()).getTime(),
