@@ -28,7 +28,12 @@
     "file-loader": "^0.8.5",
     "glob": "^7.0.5",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-livereload": "^3.8.1",
     "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^7.1.0",
     "gulp-rev-collector": "^1.0.4",
@@ -48,7 +53,8 @@
     "url-loader": "^0.5.7",
     "vue": "^1.0.21",
     "vue-server": "^0.4.8",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "yargs": "^4.7.1"
   },
   "repository": "",
   "license": "MIT"

@@ -2,206 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3718d916-76c8-4481-adb3-f54c92c8c208" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/src/libs/js/tools/Util.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/entry.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/entry.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/webpack.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/entry.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/entry.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/webpack.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/entry.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/entry.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/webpack.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/webpack.config.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/avatar.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/avatar.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/chat/1.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/chat/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/chat/2.png" afterPath="$PROJECT_DIR$/www/static/src/images/chat/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/chat/3.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/chat/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/chat/bg.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/chat/bg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/chat/intro.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/chat/intro.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan1.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan2.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan3.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan4.jpeg" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan4.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan6.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan7.png" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/ironMan8.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/ironMan8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/work1.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/work1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/work2.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/work2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/images/work3.jpg" afterPath="$PROJECT_DIR$/www/static/src/images/work3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/artTemplate/3.0.0/template.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/artTemplate/3.0.0/template.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/artTemplate/3.0.0/template.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/artTemplate/3.0.0/template.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/backbone/1.3.2/backbone-min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/backbone/1.3.2/backbone-min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/backbone/1.3.2/backbone.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/backbone/1.3.2/backbone.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/cookie/cookie.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/cookie/cookie.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/css/0.1.2/css.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/css/0.1.2/css.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/jquery/1.9.1/jquery.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/jquery/1.9.1/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/jquery/2.1.4/components.json" afterPath="$PROJECT_DIR$/www/static/src/libs/core/jquery/2.1.4/components.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/jquery/2.1.4/jquery.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/jquery/2.1.4/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/jquery/2.2.2/jquery.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/jquery/2.2.2/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/jquery/2.2.2/jquery.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/jquery/2.2.2/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/text/2.0.12/text.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/text/2.0.12/text.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/underscore/1.8.3/underscore.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/underscore/1.8.3/underscore.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/underscore/1.8.3/underscore.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/underscore/1.8.3/underscore.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/vue/1.0/vue.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/vue/1.0/vue.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/vue/1.0/vue.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/vue/1.0/vue.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/vueRouter/1.0/vue-router.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/vueRouter/1.0/vue-router.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/core/vueRouter/1.0/vue-router.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/core/vueRouter/1.0/vue-router.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/framework/BaseVue.js" afterPath="$PROJECT_DIR$/www/static/src/libs/framework/BaseVue.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/common/lib_cyzs.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/common/lib_cyzs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.AccountHelper.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.AccountHelper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.AjaxHelper.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.AjaxHelper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Alert.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.Alert.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BaseView.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.BaseView.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BrowserHelper.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.BrowserHelper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.BusinessDataHelper.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.BusinessDataHelper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.CommonDataFunction.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.CommonDataFunction.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Framework.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.Framework.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.ModuleView.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.ModuleView.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.PageView.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.PageView.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.ShareHelper.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.ShareHelper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Tools.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.Tools.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.UrlHelper.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.UrlHelper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.Util.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.Util.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/CYZS.WebViewJs.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/CYZS.WebViewJs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/js/cyzs/framework/CYZS.Alert.js" afterPath="$PROJECT_DIR$/www/static/src/libs/js/cyzs/framework/CYZS.Alert.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/countUp/angular-countUp.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/countUp/angular-countUp.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/countUp/angular-countUp.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/countUp/angular-countUp.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/countUp/countUp-jquery.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/countUp/countUp-jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/countUp/countUp.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/countUp/countUp.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/countUp/countUp.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/countUp/countUp.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/countUp/readMe" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/countUp/readMe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/flexslider/2.5.0/jquery.flexslider-min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/flexslider/2.5.0/jquery.flexslider-min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/handlebars.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/handlebars.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/jquery.lazyload/1.9.1/jquery.lazyload.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/jquery.lazyload/1.9.1/jquery.lazyload.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/jquery.lazyload/1.9.1/jquery.lazyload.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/jquery.lazyload/1.9.1/jquery.lazyload.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/jquery.waterfall.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/jquery.waterfall/0.1.72/jquery.waterfall.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/jquery.waterfall/0.1.72/jquery.waterfall.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/jquery.waterfall.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/json2/20150503/json2.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/json2/20150503/json2.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/classie.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/classie.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/font.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/font.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/codropsicons/codropsicons.eot" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/codropsicons/codropsicons.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/codropsicons/codropsicons.svg" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/codropsicons/codropsicons.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/codropsicons/codropsicons.ttf" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/codropsicons/codropsicons.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/codropsicons/codropsicons.woff" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/codropsicons/codropsicons.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/linecons/linecons.eot" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/linecons/linecons.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/linecons/linecons.svg" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/linecons/linecons.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/linecons/linecons.ttf" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/linecons/linecons.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/fonts/linecons/linecons.woff" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/fonts/linecons/linecons.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/modernizr.custom.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/modernizr.custom.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/normalize.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/normalize.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/notificationFx.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/notificationFx.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/ns-default.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/ns-default.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/ns-style-bar.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/ns-style-bar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/notification/ns-style-growl.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/notification/ns-style-growl.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/pagination/jquery.pagination-1.2.7.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/pagination/jquery.pagination-1.2.7.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/pagination/jquery.pagination.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/pagination/jquery.pagination.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/pagination/pagination_hack.less" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/pagination/pagination_hack.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/LICENSE.md" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/LICENSE.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/README.md" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/bower.json" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/css/style.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/demo/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/index.html" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/demo/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/js/app.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/demo/js/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/js/lib/stats.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/demo/js/lib/stats.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/demo/particles.json" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/demo/particles.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/package.json" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/particles.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/particles.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/particles/particles.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/particles/particles.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/pie/1.0.0/PIE.htc" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/pie/1.0.0/PIE.htc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/pie/1.0.0/PIE.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/pie/1.0.0/PIE.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/qrcode/1.0.0/jquery.qrcode.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/qrcode/1.0.0/jquery.qrcode.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slick/slick-theme.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slick/slick-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slick/slick.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slick/slick.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slick/slick.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slick/slick.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slider.revolution/jquery.themepunch.enablelog.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slider.revolution/jquery.themepunch.enablelog.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slider.revolution/jquery.themepunch.revolution.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slider.revolution/jquery.themepunch.revolution.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slider.revolution/jquery.themepunch.revolution.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slider.revolution/jquery.themepunch.revolution.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/slider.revolution/jquery.themepunch.tools.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/slider.revolution/jquery.themepunch.tools.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/star/ReadMe" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/star/ReadMe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/star/sparkle.css" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/star/sparkle.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/star/sparkle.jquery.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/star/sparkle.jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/theater/theater.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/theater/theater.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/theater/theater.min.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/theater/theater.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/plugin/waterfall.js" afterPath="$PROJECT_DIR$/www/static/src/libs/plugin/waterfall.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/libs/styles/initial.css" afterPath="$PROJECT_DIR$/www/static/src/libs/styles/initial.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/card/card.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/card/card.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/card/card.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/card/card.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/card/cardTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/card/cardTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/entry.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/entry.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/list/list.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/list.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/list/list.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/list.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/list/listTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/listTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/main/main.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/main/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/main/main.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/main/main.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/main/mainTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/main/mainTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/main/store.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/main/store.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/message/message.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/message/message.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/message/message.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/message/message.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/message/messageTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/message/messageTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/text/text.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/text/text.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/text/text.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/text/text.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/chat/show/text/textTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/chat/show/text/textTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/contact.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/contact/contact.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/contact.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/contact/contact.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/contactTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/contact/contactTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/contact/images/contact.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/contact/images/contact.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/entry.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/entry.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/background.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/images/background.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/bak.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/images/bak.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/photo.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/images/photo.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/images/top.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/images/top.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/main.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/main.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/main.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/main/mainTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/main/mainTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/statistics/statistics.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/statistics/statistics.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/statistics/statistics.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/statistics/statistics.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/statistics/statistics.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/statistics/statistics.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/bak.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/images/bak.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/photo1.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/images/photo1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/photo2.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/images/photo2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/photo3.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/images/photo3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/images/readme.jpg" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/images/readme.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/work.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/work.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/work.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/work.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/index/index/work/workTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/index/index/work/workTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/entry.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/entry.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/header/header.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/header/header.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/header/header.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/header/header.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/header/headerTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/header/headerTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/introduction/introduction.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/introduction/introduction.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/introduction/introduction.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/introduction/introduction.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/introduction/introductionTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/introduction/introductionTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/main/main.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/main/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/main/main.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/main/main.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/main/mainTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/main/mainTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/work/work.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/work/work.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/work/work.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/work/work.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/info/index/work/workTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/info/index/work/workTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/entry.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/login/index/entry.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" afterPath="$PROJECT_DIR$/www/static/src/modules/business/login/index/main/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" afterPath="$PROJECT_DIR$/www/static/src/modules/business/login/index/main/main.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/modules/business/login/index/main/mainTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/business/login/index/main/mainTpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/static/styles/business/login/index.css" afterPath="$PROJECT_DIR$/www/static/src/styles/business/login/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpFile.js" afterPath="$PROJECT_DIR$/gulpFile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/controller/base.js" afterPath="$PROJECT_DIR$/src/business/controller/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/controller/user.js" afterPath="$PROJECT_DIR$/src/business/controller/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/controller/work.js" afterPath="$PROJECT_DIR$/src/business/controller/work.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/bootstrap/global.js" afterPath="$PROJECT_DIR$/src/common/bootstrap/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/config/config.js" afterPath="$PROJECT_DIR$/src/common/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/chat/show.html" afterPath="$PROJECT_DIR$/view/business/chat/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/chat/showBak.html" afterPath="$PROJECT_DIR$/view/business/chat/showBak.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/index/index.html" afterPath="$PROJECT_DIR$/view/business/index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/info/index.html" afterPath="$PROJECT_DIR$/view/business/info/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/login/index.html" afterPath="$PROJECT_DIR$/view/business/login/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/business/login/indexBak.html" afterPath="$PROJECT_DIR$/view/business/login/indexBak.html" />
     </list>
     <list id="2db5b292-bcf1-41d8-8b9a-2480d765e8a6" name="NoCommit" comment="Current branch no commit" />
     <ignored path="ThinkMoment.iws" />
@@ -226,22 +29,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="error.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/config/error.js">
+      <file leaf-file-name="gulpFile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpFile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="721">
+              <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -272,10 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.less" />
-        <option value="$PROJECT_DIR$/www/static/modules/business/login/index/main/main.js" />
-        <option value="$PROJECT_DIR$/www/static/libs/framework/BaseVue.js" />
-        <option value="$PROJECT_DIR$/pm2.json" />
         <option value="$PROJECT_DIR$/src/common/bootstrap/pusher.js" />
         <option value="$PROJECT_DIR$/src/common/config/pusher.js" />
         <option value="$PROJECT_DIR$/src/common/config/error.js" />
@@ -305,7 +96,6 @@
         <option value="$PROJECT_DIR$/www/static/modules/business/chat/show/main/main.js" />
         <option value="$PROJECT_DIR$/src/business/controller/chat.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/gulpFile.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/www/static/src/libs/framework/BaseVue.js" />
         <option value="$PROJECT_DIR$/www/static/src/libs/js/tools/Util.js" />
@@ -322,6 +112,11 @@
         <option value="$PROJECT_DIR$/src/business/controller/work.js" />
         <option value="$PROJECT_DIR$/src/common/bootstrap/global.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/www/static/src/modules/business/chat/show/entry.js" />
+        <option value="$PROJECT_DIR$/www/static/build/modules/business/chat/show/entry.pack.js" />
+        <option value="$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/list.js" />
+        <option value="$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/list.less" />
+        <option value="$PROJECT_DIR$/gulpFile.js" />
         <option value="$PROJECT_DIR$/src/common/config/config.js" />
       </list>
     </option>
@@ -335,10 +130,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
-    <option name="y" value="23" />
-    <option name="width" value="1228" />
-    <option name="height" value="777" />
+    <option name="x" value="-1725" />
+    <option name="y" value="56" />
+    <option name="width" value="1575" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -414,6 +209,138 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="show" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="show" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -439,6 +366,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkMoment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -465,7 +410,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,28 +429,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkMoment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkMoment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,12 +561,13 @@
       <workItem from="1466307084363" duration="5244000" />
       <workItem from="1466428878644" duration="3210000" />
       <workItem from="1466473591017" duration="692000" />
-      <workItem from="1466500692167" duration="10827000" />
+      <workItem from="1466500692167" duration="22565000" />
+      <workItem from="1466648770592" duration="6884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96055000" />
+    <option name="totallyTimeSpent" value="114677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,14 +579,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="23" width="1228" height="777" extended-state="0" />
+    <frame x="-1725" y="56" width="1575" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30323115" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23552124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4992722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -699,54 +623,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/index/index/contact/contact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/login/index/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/login/index/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="23" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/index/index/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="7" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/build/modules/business/index/index/entry.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22155">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/info/index/header/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/info/index/introduction/introduction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -759,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="1194" column="89" selection-start-line="1194" selection-start-column="69" selection-end-line="1194" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,9 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#446#1502#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -825,15 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="18" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1096">
           <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,7 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,9 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-          <folding>
-            <marker date="1466518181000" expanded="true" signature="755:801" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,7 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-810">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-241">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-181">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,9 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,27 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/bootstrap/tools.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/chat/show/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,17 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1665">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/config/error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,15 +898,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/config/error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/build/styles/business/login/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/controller/contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/bootstrap/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/build/modules/business/chat/show/entry.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="0" column="277" selection-start-line="0" selection-start-column="277" selection-end-line="0" selection-end-column="277" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/chat/show/entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/build/modules/business/chat/show/entry.pack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="781" column="47" selection-start-line="781" selection-start-column="39" selection-end-line="781" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/src/modules/business/chat/show/list/list.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
