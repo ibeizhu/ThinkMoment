@@ -26,18 +26,34 @@ module.exports = BaseVue.extend({
     methods: {
         addMessage: function () {
             var self = this;
+            if(!this.name){
+                self.renderNotice("Name can not be empty");
+                return;
+            }
+            if(!this.email){
+                self.renderNotice("Email can not be empty");
+                return;
+            }
+            if(!/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(this.email)){
+                self.renderNotice("Email format incorrect");
+                return;
+            }
+            if(!this.message){
+                self.renderNotice("Message can not be empty");
+                return;
+            }
             var record = {
                 name:this.name,
                 email:this.email,
                 message:this.message
             };
             $.ajax({
-                url: '/business/index/add',
+                url: '/business/contact/add',
                 data: record,
-                type: "GET",
+                type: "POST",
                 success: function (res) {
-                    if(!res.result){
-                        self.renderNotice(res.message);
+                    if(res.errno > 0){
+                        self.renderNotice("request params error");
                         return;
                     }
                     self.renderNotice("Your message has been sent successfully.");
@@ -49,7 +65,7 @@ module.exports = BaseVue.extend({
         },
         renderNotice:function (message) {
             this.notification = new NotificationFx({
-                message : '<span class="icon icon-megaphone"></span><p>'+message+' Go <a href="#">check it out</a> now.</p>',
+                message : '<span class="icon icon-megaphone"></span><p>'+message+'</p>',
                 layout : 'bar',
                 effect : 'slidetop',
                 type : 'notice', // notice, warning or error

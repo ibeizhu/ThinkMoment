@@ -8,16 +8,12 @@ import Base from './base.js';
 export default class extends Base {
 
     async addAction(){
-        let name = this.get("name");
-        let email = this.get("email");
-        let message = this.get("message");
-        if(!name || !email || !message){
-            this.fail({
-                result:false,
-                message:"必填字段不能为空!"
-            });
-        }
+        let userInfo = await this.session("userInfo");
+        let name = this.post("name");
+        let email = this.post("email");
+        let message = this.post("message");
         let record = {
+            user_id:userInfo.userId,
             name:name,
             email:email,
             message:message,
@@ -52,6 +48,7 @@ export default class extends Base {
 
     async listAction(){
         let page = this.get("page");
+        let pageSize = this.get("pageSize");
         let userid = this.get("userid");
         if(think.isEmpty(userid)){
             userid = 100000;
@@ -59,17 +56,14 @@ export default class extends Base {
         if(think.isEmpty(page)){
             page = 1;
         }
-        let list = await this.model("contact").page(page,10).countSelect();
+        if(think.isEmpty(pageSize)){
+            pageSize = 10;
+        }
+        let list = await this.model("contact").page(page,pageSize).countSelect();
         return this.success(list);
     }
     async deleteAction(){
-        let id = this.get("id");
-        if(think.isEmpty(id)){
-            this.fail({
-                message:"请提供id!"
-            });
-            return;
-        }
+        let id = this.post("id");
         let affectedRows = await this.model("contact").where({id:id}).delete();
         let data = {};
         if(affectedRows > 0){

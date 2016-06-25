@@ -56,8 +56,8 @@ gulp.task('styles',function () {
     return gulp.src(path)
         // .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(minifyCss())
-        .pipe(gulp.dest(destPath))
-        .pipe(notify({ message: 'Task:styles complete' }));
+        .pipe(gulp.dest(destPath));
+        // .pipe(notify({ message: 'Task:styles complete' }));
 });
 
 gulp.task('images',function () {
@@ -65,16 +65,16 @@ gulp.task('images',function () {
     var destPath = rootPath + "/build/images";
     return gulp.src(path)
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest(destPath))
-        .pipe(notify({ message: 'Task:Images complete' }));
+        .pipe(gulp.dest(destPath));
+        // .pipe(notify({ message: 'Task:Images complete' }));
 });
 
 gulp.task('libs',function () {
     var path = rootPath + "/src/libs/**";
     var destPath = rootPath + "/build/libs";
     return gulp.src(path)
-        .pipe(gulp.dest(destPath))
-        .pipe(notify({ message: 'Task:libs complete' }));
+        .pipe(gulp.dest(destPath));
+        // .pipe(notify({ message: 'Task:libs complete' }));
 });
 
 gulp.task("webpack",function (cb) {
@@ -104,8 +104,8 @@ gulp.task("webpack",function (cb) {
                 .pipe(rename(function (path) {
                     path.basename = path.basename.replace('.pack',".min");
                 }))
-                .pipe(gulp.dest(singleDestDir))
-                .pipe(notify({ message: 'Task:Webpack file '+ index+' complete' }));
+                .pipe(gulp.dest(singleDestDir));
+                // .pipe(notify({ message: 'Task:Webpack file '+ index+' complete' }));
         });
     });
 });

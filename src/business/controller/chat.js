@@ -24,7 +24,7 @@ export default class extends Base {
     /**
      * 获取对话列表
      */
-    async userlistAction(){
+    async listAction(){
         let userId = this.get("userId");
         let loginUser  = await this.session("userInfo");
         if(userId == loginUser.userId){

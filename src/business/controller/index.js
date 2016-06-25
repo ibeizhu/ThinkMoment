@@ -23,27 +23,4 @@ export default class extends Base {
     record.totalCount = statistic.total_visit;
     this.success(record);
   }
-
-  async addAction(){
-    let name = this.get("name");
-    let email = this.get("email");
-    let message = this.get("message");
-    if(!name || !email || !message){
-      this.fail({
-        result:false,
-        message:"必填字段不能为空!"
-      });
-    }
-    let record = {
-      name:name,
-      email:email,
-      message:message
-    };
-    await this.model("contact").add(record);
-    this.success({
-      result:true,
-      message:"添加成功!"
-    });
-  }
-
 }
