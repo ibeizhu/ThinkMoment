@@ -6,7 +6,6 @@ var moduleTpl = require("./mainTpl.html");
 // 基础vue
 var BaseVue = require("BaseVue");
 // 组件
-var store = require("./store");
 var Card = require("../card/card");
 var List = require("../list/list");
 var Text = require("../text/text");
@@ -26,7 +25,6 @@ module.exports = BaseVue.extend({
         this.bindPusher();
     },
     data: function() {
-        // var serverData = store.fetch();
         return {
             // 登录用户
             user: {},
@@ -74,7 +72,7 @@ module.exports = BaseVue.extend({
         },
         bindPusher:function () {
             var self = this;
-            Pusher.logToConsole = true;
+            // Pusher.logToConsole = true;
             var pusher = new Pusher('f04759682e5fa7e8ae8c', {
                 encrypted: true
             });

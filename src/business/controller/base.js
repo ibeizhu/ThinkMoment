@@ -46,10 +46,10 @@ export default class extends think.controller.base {
             //     controller:"index",
             //     actions:["index"]
             // },
-            {
-                controller:"chat",
-                actions:["test","push","send","show"]
-            }
+            // {
+            //     controller:"chat",
+            //     actions:["test","push","send","show"]
+            // }
         ];
         let flag = false;
         blankActions.forEach(function (item,index) {
