@@ -13,57 +13,69 @@ export default class extends Base {
      * @param  {Object} http []
      * @return {}      []
      */
-    async init(http){
+    init(http){
         super.init(http);
         this.messagePusher = new Pusher(this.config("pusher"));
-        this.adminUser = await this.getAdminUserInfo();
     }
     showAction(){
         return this.display();
     }
 
     /**
-     * 获取聊天的用户列表
-     * @returns {*}
-     */
-    async usersAction(){
-        let loginUser = await this.session("userInfo");
-        let [fields,userList] = ["id,name,avatar,motto,position,isAdmin",{}];
-        if(loginUser.isAdmin){
-            userList = await this.model("user").field(fields).where({isAdmin:0}).select();
-        }else{
-            userList = await this.model("user").field(fields).where({id:loginUser.userId}).select();
-        }
-        return this.success({
-            userList:userList,
-            adminUser:this.adminUser
-        });
-    }
-
-    /**
-     * 根据某个用户id获取聊天列表,支持分页
-     * @returns {*}
+     * 获取对话列表
      */
     async listAction(){
-        // 这里userId当做聊天的relationId
         let userId = this.get("userId");
-        let page = this.get("page");
-        let pageSize = this.get("pageSize");
-        if(think.isEmpty(page)){
-            page = 1;
+        let loginUser  = await this.session("userInfo");
+        if(userId == loginUser.userId){
+            return this.fail("user id error");
         }
-        if(think.isEmpty(pageSize)){
-            pageSize = 20;
+        let list = await this.model("chatrelation").field("relationId,collectionId").where({collectionId:{'like':'%' + loginUser.userId + '%'}}).select();
+        let relationId,relationIndex;
+        if(think.isEmpty(userId)){
+            if(list && list[0]){
+                relationId = list[0].relationId;
+                let chatList = await this.model("chat").where({relationId:relationId}).select();
+                list[0].chatList = chatList;
+            }else{
+                list = {};
+            }
+        }else{
+            _.each(list,function(item,index){
+                item.chatList = {};
+                if(item.collectionId.indexOf(userId) > -1){
+                    relationId = item.relationId;
+                    relationIndex = index;
+                }
+            });
+            if(typeof relationIndex == 'undefined'){
+                return this.fail("user id error");
+            }
+            let chatList = await this.model("chat").where({relationId:relationId}).select();
+            list[relationIndex].chatList = chatList;
         }
-        let chatList = await this.model("chat").where({relationId:userId}).page(page,pageSize).countSelect();
-        return this.success(chatList);
+        return this.success(list);
     }
 
     /**
      * 发送消息action
      */
     async sendAction(){
+        if(!this.isPost()){
+            this.fail("INCORRECT_AJAX_TYPE_POST");
+            return;
+        }
         let params = this.post();
+        // 检查对话的关系链
+        let relationItem = await this.model("chatrelation").where({relationId:params.relationId}).find();
+        if(think.isEmpty(relationItem)){
+            this.fail("RELATION_NOT_EXIST");
+            return;
+        }
+        if(relationItem.collectionId.indexOf(params.speakerId) == -1 || relationItem.collectionId.indexOf(params.audienceId) == -1){
+            this.fail("RELATION_NOT_MATCH");
+            return;
+        }
         // 保存消息
         think.extend(params,{
             status:0,
@@ -75,7 +87,7 @@ export default class extends Base {
             this.fail("MESSAGE_SEND_FAIL");
             return;
         }
-        this.pushMessage(params);
+        this.messagePusher.trigger(params.relationId, 'moment-push', params);
         this.success({
             result:true,
             chatId:chatId,
@@ -84,27 +96,15 @@ export default class extends Base {
     }
 
     /**
-     * 推送消息(每次发送一条消息,推送给管理员和当前关系人)
+     * 推送消息
      * @param msg 消息
      */
     pushMessage(params){
         if(!params.relationId){
             return;
         }
-        const pushEvent = 'moment-push';
-        // 设计userId为relationId
-        this.messagePusher.trigger(this.adminUser.id, pushEvent, params);
-        this.messagePusher.trigger(params.relationId, pushEvent, params);
-    }
-
-    /**
-     * 获取管理员信息
-     * @returns {*}
-     */
-    async getAdminUserInfo(){
-        let fields = "id,name,avatar,motto,position,isAdmin";
-        let adminUser = await this.model("user").field(fields).where({id:100000}).find();
-        return adminUser;
+        let pushevent = 'moment-push';
+        this.messagePusher.trigger(params.relationId, pushevent, params);
     }
     // async addmsgAction(){
     //     let msg = {

@@ -62,6 +62,7 @@ CREATE TABLE `moment_user`(
      `address` text COMMENT '地址',
      `introduction` text COMMENT '个人简介',
      `motto` text COMMENT '座右铭',
+     `isAdmin` tinyint(2) NOT NULL DEFAULT 0 COMMENT '是否管理员',
      `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
      `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
     PRIMARY KEY (`id`)

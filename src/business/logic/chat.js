@@ -13,6 +13,15 @@ export default class extends think.logic.base {
             speakerId:"required",
             audienceId:"required",
             message:"required"
-        }
+        };
+        //只允许 POST 请求类型
+        this.allowMethods = "post";
+    }
+    listAction(){
+        this.rules={
+            userId:"required"
+        };
+        //只允许 GET 请求类型
+        this.allowMethods = "get";
     }
 }

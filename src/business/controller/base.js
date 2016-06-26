@@ -64,7 +64,7 @@ export default class extends think.controller.base {
             let userInfo = await this.session("userInfo");
             if(think.isEmpty(userInfo)){
                 if(this.isAjax()){
-                    this.error('NO_LOGIN');
+                    return this.error('NO_LOGIN');
                 }else{
                     return this.redirect("/business/login/index");
                 }

@@ -9,7 +9,7 @@
     // });
     
     $.ajax({
-        url:'/business/chat/list',
+        url:'/business/chat/users',
         data:{},
         type:"GET",
         success:function (res) {
