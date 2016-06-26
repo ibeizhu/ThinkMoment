@@ -8,7 +8,7 @@ var BaseVue = require("BaseVue");
 
 module.exports = BaseVue.extend({
     template: moduleTpl,
-    props: ['session'],
+    props: ['session','user'],
     data:function(){
         return {
             text: ''
@@ -17,13 +17,26 @@ module.exports = BaseVue.extend({
     methods: {
         inputing:function(e) {
             if (e.ctrlKey && e.keyCode === 13 && this.text.length) {
-                this.session.messages.push({
-                    text: this.text,
-                    date: new Date(),
-                    self: true
-                });
+                var msg = {
+                    relationId:this.session.id,
+                    speakerId:this.user.id,
+                    audienceId:this.session.id,
+                    message:this.text
+                };
+                this.sendMessage(msg);
                 this.text = '';
             }
+        },
+        sendMessage:function (msg) {
+            $.ajax({
+                url:"/business/chat/send",
+                type:"POST",
+                data:msg,
+                success:function (response) {
+                    
+                }
+            });
         }
+        
     }
 });

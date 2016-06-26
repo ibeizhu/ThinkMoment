@@ -21,16 +21,15 @@ module.exports = BaseVue.extend({
     filters: {
         // 筛选出用户头像
         avatar:function(item) {
-            // 如果是自己发的消息显示登录用户的头像
-            var user = item.self?this.user:this.sessionUser;
-            return user && user.img;
-        },
-        // 将日期过滤为 hour:minutes
-        time:function(date) {
-            if (typeof date === 'string') {
-                date = new Date(date);
+            if(item.speakerId == this.user.id){
+                return this.user.avatar;
+            }else{
+                var user = _.findWhere(this.userList,{id:item.speakerId.toString()});
+                if(!user){
+                    return "/static/build/images/defaultUser.jpeg";
+                }
+                return user.avatar;
             }
-            return date.getHours() + ':' + date.getMinutes();
         }
     },
     directives: {

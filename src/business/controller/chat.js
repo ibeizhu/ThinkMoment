@@ -21,6 +21,9 @@ export default class extends Base {
     showAction(){
         return this.display();
     }
+    showbakAction(){
+        return this.display();
+    }
 
     /**
      * 获取聊天的用户列表
@@ -28,15 +31,18 @@ export default class extends Base {
      */
     async usersAction(){
         let loginUser = await this.session("userInfo");
-        let [fields,userList] = ["id,name,avatar,motto,position,isAdmin",{}];
+        let [fields,userList,totalUserList] = ["id,name,avatar,motto,position,isAdmin",{},{}];
+        totalUserList = await this.model("user").field(fields).select();
         if(loginUser.isAdmin){
-            userList = await this.model("user").field(fields).where({isAdmin:0}).select();
+            userList = _.where(totalUserList,{isAdmin:0});
+            loginUser = _.findWhere(totalUserList,{isAdmin:1});
         }else{
-            userList = await this.model("user").field(fields).where({id:loginUser.userId}).select();
+            userList = _.where(totalUserList,{isAdmin:1});
+            loginUser = _.findWhere(totalUserList,{id:loginUser.userId});
         }
         return this.success({
             userList:userList,
-            adminUser:this.adminUser
+            loginUser:loginUser
         });
     }
 
@@ -45,8 +51,12 @@ export default class extends Base {
      * @returns {*}
      */
     async listAction(){
-        // 这里userId当做聊天的relationId
+        let loginUser = await this.session("userInfo");
         let userId = this.get("userId");
+        if(!loginUser.isAdmin){
+            // 非管理员登录用户只获取与管理员的对话列表
+            userId = loginUser.userId;
+        }
         let page = this.get("page");
         let pageSize = this.get("pageSize");
         if(think.isEmpty(page)){
@@ -55,6 +65,7 @@ export default class extends Base {
         if(think.isEmpty(pageSize)){
             pageSize = 20;
         }
+        // 这里userId当做聊天的relationId
         let chatList = await this.model("chat").where({relationId:userId}).page(page,pageSize).countSelect();
         return this.success(chatList);
     }
@@ -70,6 +81,10 @@ export default class extends Base {
             create_time:new Date().getTime(),
             update_time:new Date().getTime()
         });
+        params.relationId = parseInt(params.relationId);
+        params.speakerId = parseInt(params.speakerId);
+        params.audienceId = parseInt(params.audienceId);
+        
         let chatId = await this.model("chat").add(params);
         if(think.isEmpty(chatId)){
             this.fail("MESSAGE_SEND_FAIL");
@@ -93,8 +108,8 @@ export default class extends Base {
         }
         const pushEvent = 'moment-push';
         // 设计userId为relationId
-        this.messagePusher.trigger(this.adminUser.id, pushEvent, params);
-        this.messagePusher.trigger(params.relationId, pushEvent, params);
+        this.messagePusher.trigger(this.adminUser.id.toString(), pushEvent, params);
+        this.messagePusher.trigger(params.relationId.toString(), pushEvent, params);
     }
 
     /**

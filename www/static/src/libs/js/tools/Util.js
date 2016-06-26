@@ -47,5 +47,28 @@ module.exports={
             return format;
         }
         return "";
+    },
+    /**
+     * 绑定图片加载失败事件
+     */
+    bindImgLoadError:function () {
+        $('img').each(function(){
+            var error = false;
+            if (!this.complete) {
+                error = true;
+            }
+
+            if (typeof this.naturalWidth != "undefined" && this.naturalWidth == 0) {
+                error = true;
+            }
+
+            if(error){
+                $(this).bind('error.replaceSrc',function(){
+                    this.src = "/static/build/images/defaultUser.jpeg";
+
+                    $(this).unbind('error.replaceSrc');
+                }).trigger('load');
+            }
+        });
     }
 };
