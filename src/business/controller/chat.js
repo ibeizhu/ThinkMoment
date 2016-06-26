@@ -139,18 +139,4 @@ export default class extends Base {
         let list = await this.model("chat").select();
         this.success(list);
     }
-    // async addrelationAction(){
-    //     let obj = {
-    //         // relationId:"",
-    //         collectionId:"100000-100003",
-    //         create_time:new Date().getTime(),
-    //         update_time:new Date().getTime()
-    //     };
-    //     let relationId = await this.model("chatrelation").add(obj);
-    //     this.success({relationId:relationId});
-    // }
-    async getrelationAction(){
-        let list = await this.model("chatrelation").select();
-        this.success(list);
-    }
 }
