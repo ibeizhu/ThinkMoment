@@ -1110,3 +1110,10 @@ global.StringSecurity={
         return monyer;
     }
 }
+global.getReverseList=function (arr) {
+    let newArr = [];
+    for(var i in arr){
+        newArr.unshift(arr[i]);
+    }
+    return newArr;
+}

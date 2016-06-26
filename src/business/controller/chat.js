@@ -6,6 +6,7 @@
 import Base from './base.js';
 import Pusher from 'pusher';
 import _ from 'underscore';
+import lodash from 'lodash';
 
 export default class extends Base {
     /**
@@ -66,7 +67,8 @@ export default class extends Base {
             pageSize = 20;
         }
         // 这里userId当做聊天的relationId
-        let chatList = await this.model("chat").where({relationId:userId}).page(page,pageSize).countSelect();
+        let chatList = await this.model("chat").where({relationId:userId}).page(page,pageSize).order("create_time DESC").countSelect();
+        chatList.data = lodash.reverse(chatList.data);
         return this.success(chatList);
     }
 
