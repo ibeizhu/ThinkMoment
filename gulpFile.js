@@ -5,6 +5,8 @@
 /*---------------引用模块--Start------------------*/
 
 var path = require("path");
+// 文件操作
+var fse = require('fs-extra');
 // 删除文件
 var del = require("del");
 // 筛选文件
@@ -43,7 +45,10 @@ var rootPath = path.resolve('www','static');
 
 gulp.task("clean",function (cb) {
     var buildPath = path.resolve(rootPath,'build');
-    del(buildPath).then(cb());
+    // del(buildPath).then(cb());
+
+    fse.emptydirSync(buildPath);
+    cb();
 });
 
 gulp.task("default",function (cb) {

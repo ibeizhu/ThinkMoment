@@ -21,7 +21,9 @@ module.exports = BaseVue.extend({
     },
     ready:function(){
         this.evaluateScopeData(this.rawData);
-        this.getChatList();
+        this.getChatList(function (data) {
+            this.setSessionList(data);
+        }.bind(this));
         this.bindPusher();
     },
     data: function() {
@@ -36,16 +38,44 @@ module.exports = BaseVue.extend({
             search: '',
             // 选中的会话Index
             sessionIndex: 0,
+            // 请求参数
+            params:{
+                page:2,
+                pageSize:20
+            },
             // 接口请求的原始数据
             rawData:{}
         };
     },
     watch: {
         sessionIndex:function () {
-            this.getChatList();
+            this.$broadcast("SessionIndexChanged",{});
+            this.params.page = 2;
+            this.getChatList(function (data) {
+                this.setSessionList(data);
+            }.bind(this));
+        }
+    },
+    events:{
+        'ScrollEventLoadMessage':function (data) {
+            // 添加message list
+            this.setSessionList(data,true);
         }
     },
     methods:{
+        setSessionList:function (result,isAppend) {
+            if(isAppend){
+                this.params.page++;
+                var pageList = _.toArray(result.data);
+                pageList = _.union(pageList,this.session.messages);
+                this.session.messages = pageList;
+            }else{
+                this.session = {
+                    id:result.data[0].relationId,
+                    messages:_.toArray(result.data)
+                };
+            }
+        },
         evaluateScopeData:function (rawData) {
             this.user = rawData.loginUser;
             this.user.id = this.user.id.toString();
@@ -55,19 +85,20 @@ module.exports = BaseVue.extend({
             });
             
         },
-        getChatList:function () {
+        getChatList:function (callback) {
             $.ajax({
                 url:'/business/chat/list',
                 data:{
-                    userId:this.userList[this.sessionIndex].id
+                    userId:this.userList[this.sessionIndex].id,
+                    page:1,
+                    pageSize:10
                 },
                 type:"GET",
                 success:function (res) {
-                    this.session = {
-                        id:res.data.data[0].relationId,
-                        messages:_.toArray(res.data.data)
-                    };
-                }.bind(this)
+                    if(typeof callback == 'function'){
+                        callback(res.data);
+                    }
+                }
             });
         },
         bindPusher:function () {

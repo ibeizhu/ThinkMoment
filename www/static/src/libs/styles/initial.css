@@ -97,6 +97,10 @@ input[type="button"], input[type="submit"], input[type="reset"] {
     /*position: relative;*/
 /*}*/
 
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 .fleft {
     float: left;
 }

@@ -8,7 +8,7 @@ var BaseVue = require("BaseVue");
 
 module.exports = BaseVue.extend({
     template: moduleTpl,
-    props: ['session', 'user', 'userList'],
+    props: ['session', 'user', 'userList','params'],
     computed: {
         sessionUser:function() {
             var self = this;
@@ -16,6 +16,44 @@ module.exports = BaseVue.extend({
                 return item.id === self.session.userId;
             });
             return users[0];
+        }
+    },
+    data:function () {
+        return {
+            scrollFlag:true,
+            scrollTopDistance:20
+        }
+    },
+    events:{
+        /**
+         * 监听seesionIndex变化(也可以通过watch监听)
+         * @constructor
+         */
+        'SessionIndexChanged':function () {
+            this.scrollFlag = true;
+        }
+    },
+    methods:{
+        onScroll:function (e) {
+            if(e.target.scrollTop < this.scrollTopDistance && this.scrollFlag){
+                this.scrollFlag = false;
+                var self = this;
+                $.ajax({
+                    url:'/business/chat/list',
+                    type:"GET",
+                    data:{
+                        userId:this.session.id,
+                        page:this.params.page,
+                        pageSize:this.params.pageSize
+                    },
+                    success:function (res) {
+                        if(_.size(res.data.data) > 0){
+                            self.$dispatch('ScrollEventLoadMessage',res.data);
+                            self.scrollFlag = true;
+                        }
+                    }
+                });
+            }
         }
     },
     filters: {

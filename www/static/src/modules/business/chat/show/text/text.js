@@ -16,7 +16,7 @@ module.exports = BaseVue.extend({
     },
     methods: {
         inputing:function(e) {
-            if (e.ctrlKey && e.keyCode === 13 && this.text.length) {
+            if (this.text.length) {
                 var msg = {
                     relationId:this.session.id,
                     speakerId:this.user.id,

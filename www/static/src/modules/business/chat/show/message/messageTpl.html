@@ -1,4 +1,4 @@
-<div class="m-message" v-scroll-bottom="session.messages">
+<div class="m-message" v-scroll-bottom="session.messages" @scroll="onScroll">
     <ul>
         <li v-for="item in session.messages">
             <p class="time"><span>{{item.create_time | formatDate}}</span></p>
