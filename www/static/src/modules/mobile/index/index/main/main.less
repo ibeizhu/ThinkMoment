@@ -1,0 +1,85 @@
+.main-tpl{
+  height:100%;
+  background:url("./images/background.jpg") no-repeat;
+  background-size: 100%;
+  .circle{
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 100%;
+    border: 1px solid rgba(255,255,255,0.2);
+    width:120px;
+    height:120px;
+    animation: circle 2s infinite;
+    -webkit-animation: circle 2s infinite;
+    -moz-animation: circle 2s infinite;
+    -o-animation: circle 2s infinite;
+  }
+  .icon{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:120px;
+    height:120px;
+    background:url("./images/center.png") no-repeat;
+    background-size: 100%;
+  }
+  footer{
+    position: absolute;
+    bottom:20px;
+    left:10px;
+    right:10px;
+    text-align: center;
+    color:rgba(255,255,255,0.5);
+    .title{
+      font-size: 33px;
+      color:rgba(255,255,255,0.9);
+    }
+    p{
+      font-size: 17px;
+      line-height: 1.6;
+    }
+  }
+
+  @-webkit-keyframes circle {
+    from{
+      width:150px;
+      height:150px;
+    }
+    to{
+      width:350px;
+      height:350px;
+    }
+  }
+  @-moz-keyframes circle {
+    from{
+      width:150px;
+      height:150px;
+    }
+    to{
+      width:350px;
+      height:350px;
+    }
+  }
+  @-o-keyframes circle {
+    from{
+      width:150px;
+      height:150px;
+    }
+    to{
+      width:350px;
+      height:350px;
+    }
+  }
+  @keyframes circle {
+    from{
+      width:150px;
+      height:150px;
+    }
+    to{
+      width:350px;
+      height:350px;
+    }
+  }
+
+}

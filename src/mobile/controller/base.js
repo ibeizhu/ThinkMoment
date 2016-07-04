@@ -22,9 +22,9 @@ export default class extends think.controller.base {
         let isLocalHost = this.http.hostname.indexOf("127.0.0.1") > -1?true:false;
         this.mediaPath = '/static/build/';
         if(!think.isEmpty(jsDebug) || isLocalHost){
-            this.entryJs = `/static/build/modules/business/${ this.http.controller }/${ this.http.action }/${ packJs }`;
+            this.entryJs = `/static/build/modules/mobile/${ this.http.controller }/${ this.http.action }/${ packJs }`;
         }else{
-            this.entryJs = `/static/build/modules/business/${ this.http.controller }/${ this.http.action }/${ uglifyJs }`;
+            this.entryJs = `/static/build/modules/mobile/${ this.http.controller }/${ this.http.action }/${ uglifyJs }`;
         }
     }
 }
