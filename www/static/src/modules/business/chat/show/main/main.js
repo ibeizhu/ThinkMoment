@@ -104,7 +104,7 @@ module.exports = BaseVue.extend({
         bindPusher:function () {
             var self = this;
             // Pusher.logToConsole = true;
-            var pusher = new Pusher('f04759682e5fa7e8ae8c', {
+            var pusher = new Pusher('ce9e65fa6227f9d65586', {
                 encrypted: true
             });
             var channel = pusher.subscribe(this.user.id.toString());

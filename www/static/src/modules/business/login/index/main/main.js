@@ -12,6 +12,7 @@ module.exports = BaseVue.extend({
 
     },
     ready:function(){
+        this.setBodySize();
         this.renderParticlesBackground();
         this.renderTheater();
     },
@@ -67,7 +68,7 @@ module.exports = BaseVue.extend({
          * render particles animate background
          */
         renderParticlesBackground:function () {
-            particlesJS('particles-js',{
+            particlesJS('js_particles',{
                     "particles": {
                         "number": {
                             "value": 80,
@@ -248,6 +249,15 @@ module.exports = BaseVue.extend({
                 }
                 count++;
             },500);
+        },
+        /**
+         * set body size eq window
+         */
+        setBodySize:function () {
+            $('body').width($(window).width());
+            $('body').height($(window).height());
+            $('#js_particles').width($(window).width());
+            $('#js_particles').height($(window).height());
         }
     },
     filters:{

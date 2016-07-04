@@ -4,11 +4,12 @@
 'use strict';
 /**
  * pusher config
+ * https://dashboard.pusher.com/apps/195423/getting_started
  */
 export default{
-    appId: '216279',
-    key: 'f04759682e5fa7e8ae8c',
-    secret: '66f3785186465baab6d3',
+    appId: '195423',
+    key: 'ce9e65fa6227f9d65586',
+    secret: '05877206a9193fb05a55',
     encrypted: true
 }
  
