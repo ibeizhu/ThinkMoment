@@ -2,6 +2,8 @@
  * Created by Moment on 16/7/4.
  */
 (function () {
+    var attachFastClick = require('fastclick');
+    attachFastClick.attach(document.body);
     var MainVue = require("./main/main");
     var Life = require("./life/life");
     var Home = require("./home/home");

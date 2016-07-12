@@ -1,10 +1,10 @@
 <div class="main-tpl js_mainTpl">
     <nav class="js_leftNav">
         <ul>
-            <li><a @click="onShowBar" v-link="{ path: 'home' }">Home</a></li>
-            <li><a @click="onShowBar" v-link="{ path: 'life' }">Life</a></li>
-            <li><a @click="onShowBar" v-link="{ path: 'work' }">Work</a></li>
-            <li><a @click="onShowBar" v-link="{ path: 'blog' }">Blog</a></li>
+            <li><a @click="onShowBar" v-link="{ path: '/moment/home' }">Home</a></li>
+            <li><a @click="onShowBar" v-link="{ path: '/moment/life' }">Life</a></li>
+            <li><a @click="onShowBar" v-link="{ path: '/moment/work' }">Work</a></li>
+            <li><a @click="onShowBar" v-link="{ path: '/moment/blog' }">Blog</a></li>
         </ul>
     </nav>
     <div class="main-content" v-bind:style="mainStyle">
