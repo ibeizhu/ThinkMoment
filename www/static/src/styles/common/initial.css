@@ -1,0 +1,137 @@
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 22px;
+    font-family:"\5fae\8f6f\96c5\9ed1", "Microsoft YaHei";
+}
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+    font-style: inherit;
+    font-weight: inherit;
+}
+textarea:foucs{
+    outline: none;
+}
+del, ins {
+    text-decoration: none;
+}
+
+ul,li {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+img {
+    border: 0;
+}
+
+a img {
+    border: 0;
+}
+a,input,div,span,em,li,p,textarea,select,button{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+ul, li, p {
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearleft {
+    clear: left;
+}
+
+/** 清浮动 **/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    _overflow: hidden;
+}
+
+* html > body .clearfix {
+    display: inline-block;
+    width: 100%;
+}
+
+* html .clearfix {
+    height: 1%; /* End hide from IE-mac */
+}
+
+a {
+    text-decoration: none;
+    color: #df4a54;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+.none{display: none;}
+/*.page {*/
+    /*width: 640px;*/
+    /*margin: 0 auto;*/
+    /*overflow: hidden;*/
+    /*position: relative;*/
+/*}*/
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.mobile-body{
+    width:100%;
+    max-width:750px;
+    margin: auto;
+    background-color: #eaeaea;
+}
+.transition{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.position-center{
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}

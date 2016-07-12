@@ -1,0 +1,22 @@
+
+.MixinBorderRadius(@radius:5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.MixinTransition(@p1,@p2,@p3){
+  //all 0.5s ease
+  -webkit-transition: @p1 @p2 @p3;
+  -moz-transition: @p1 @p2 @p3;
+  -o-transition: @p1 @p2 @p3;
+  transition: @p1 @p2 @p3;
+}
+
+.MixinPosition{
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}

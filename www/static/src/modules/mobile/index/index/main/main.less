@@ -1,85 +1,50 @@
 .main-tpl{
-  height:100%;
-  background:url("./images/background.jpg") no-repeat;
-  background-size: 100%;
-  .circle{
+  width: 100%;
+  height: 100%;
+  .main-content{
     position: absolute;
-    top:50%;
-    left:50%;
-    border-radius: 100%;
-    border: 1px solid rgba(255,255,255,0.2);
-    width:120px;
-    height:120px;
-    animation: circle 2s infinite;
-    -webkit-animation: circle 2s infinite;
-    -moz-animation: circle 2s infinite;
-    -o-animation: circle 2s infinite;
-  }
-  .icon{
-    position: absolute;
-    top:50%;
-    left:50%;
-    width:120px;
-    height:120px;
-    background:url("./images/center.png") no-repeat;
+    left:0;
+    top:0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    background:url("./images/background.png") no-repeat;
     background-size: 100%;
+    box-shadow: -1px 0 6px #ccc;
+    z-index: 11;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    .nav-bar{
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      -webkit-transition: all .5s ease-in;
+      -moz-transition: all .5s ease-in;
+      -o-transition: all .5s ease-in;
+      transition: all .5s ease-in;
+      &:active p{
+        background-color: #ccc;
+      }
+    }
   }
-  footer{
+  nav{
     position: absolute;
-    bottom:20px;
-    left:10px;
-    right:10px;
-    text-align: center;
-    color:rgba(255,255,255,0.5);
-    .title{
-      font-size: 33px;
-      color:rgba(255,255,255,0.9);
-    }
-    p{
-      font-size: 17px;
-      line-height: 1.6;
-    }
-  }
-
-  @-webkit-keyframes circle {
-    from{
-      width:150px;
-      height:150px;
-    }
-    to{
-      width:350px;
-      height:350px;
+    top:0;
+    bottom: 0;
+    left:0;
+    width:150px;
+    background-color: #2b456e;
+    z-index: 10;
+    padding-top: 50px;
+    li{
+      line-height: 2;
+      text-align: center;
+      color:rgba(255,255,255,0.5);
+      a{
+        color:rgba(255,255,255,0.5);
+      }
     }
   }
-  @-moz-keyframes circle {
-    from{
-      width:150px;
-      height:150px;
-    }
-    to{
-      width:350px;
-      height:350px;
-    }
-  }
-  @-o-keyframes circle {
-    from{
-      width:150px;
-      height:150px;
-    }
-    to{
-      width:350px;
-      height:350px;
-    }
-  }
-  @keyframes circle {
-    from{
-      width:150px;
-      height:150px;
-    }
-    to{
-      width:350px;
-      height:350px;
-    }
-  }
-
 }

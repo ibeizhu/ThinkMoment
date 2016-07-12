@@ -5,28 +5,46 @@ require("./main.less");
 var moduleTpl = require("./mainTpl.html");
 // 基础vue
 var BaseVue = require("BaseVue");
-// var Header = require("../header/header");
 // 组件
-// var Work = require("../work/work");
-// var Contact = require("../contact/contact");
-// var Statistics = require("../statistics/statistics");
-
+var Bar = require("../component/bar");
 module.exports = BaseVue.extend({
     template: moduleTpl,
-    created:function() {
-
-    },
     components:{
-        // "work-cpn":Work,
-        // "contact-cpn":Contact,
-        // "statistics-cpn":Statistics
+        "bar":Bar
     },
     ready:function(){
-        
+        this.bindAlloyFinger();
     },
     data: function() {
-        // 作用域数据结构
         return {
+            mainStyle:{
+                left:'0'
+            }
+        }
+    },
+    methods:{
+        bindAlloyFinger:function () {
+            var self = this;
+            new AlloyFinger($('body')[0], {
+                swipe: function (evt) {
+                    console.log("swipe" + evt.direction);
+                    // alert("swipe" + evt.direction);
+                    if(evt.direction == 'Right'){
+                        self.mainStyle.left = '150px';
+                    }else if(evt.direction == 'Left'){
+                        self.mainStyle.left = '0';
+                    }
+                }
+            });
+        },
+        onShowBar:function () {
+            if(this.mainStyle.left == 0){
+                this.mainStyle.left = '150px';
+                // this.mainStyle.transform = 'rotate3d(1，1,0,45deg)';
+            }else{
+                this.mainStyle.left = '0';
+                // this.mainStyle.transform = 'skewY(0)';
+            }
 
         }
     }
