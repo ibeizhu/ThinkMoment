@@ -35,16 +35,16 @@ body{
       background-color:rgba(255,255,255,0.6);
     }
     .first{
-      animation: first 1.5s ease-in;
-      -webkit-animation: first 1.5s ease-in;
-      -moz-animation: first 1.5s ease-in;
-      -o-animation: first 1.5s ease-in;
+      animation: first 1s cubic-bezier(0, 0, 0.66,-0.29);
+      -webkit-animation: first 1s cubic-bezier(0, 0, 0.66,-0.29);
+      -moz-animation: first 1s cubic-bezier(0, 0, 0.66,-0.29);
+      -o-animation: first 1s cubic-bezier(0, 0, 0.66,-0.29);
     }
     .second{
-      animation: second 1.5s ease-in;
-      -webkit-animation: second 1.5s ease-in;
-      -moz-animation: second 1.5s ease-in;
-      -o-animation: second 1.5s ease-in;
+      animation: second 1s cubic-bezier(0, 0, 0.89,-0.43);
+      -webkit-animation: second 1s cubic-bezier(0, 0, 0.89,-0.43);
+      -moz-animation: second 1s cubic-bezier(0, 0, 0.89,-0.43);
+      -o-animation: second 1s cubic-bezier(0, 0, 0.89,-0.43);
     }
     .third{
       animation: third .5s ease-in;
@@ -72,54 +72,198 @@ body{
 }
 
 @-webkit-keyframes first {
-  from   {top:-1000%;left:-1000%;}
-  to {top:0;left:0;}
+  from   {left:-1000px;opacity: 0}
+  70%{
+    left:50px;
+    opacity: 1
+  }
+  80%{
+    left:20px;
+  }
+  88%{
+    left:-15px;
+  }
+  92%{
+    left:10px;
+  }
+  to {left:0;opacity: 1}
 }
 @-moz-keyframes first {
-  from   {top:-1000%;left:-1000%;}
-  to {top:0;left:0;}
+  from   {left:-1000px;opacity: 0}
+  70%{
+    left:50px;
+    opacity: 1
+  }
+  80%{
+    left:20px;
+  }
+  88%{
+    left:-15px;
+  }
+  92%{
+    left:10px;
+  }
+  to {left:0;opacity: 1}
 }
 @-o-keyframes first {
-  from   {top:-1000%;left:-1000%;}
-  to {top:0;left:0;}
+  from   {left:-1000px;opacity: 0}
+  70%{
+    left:50px;
+    opacity: 1
+  }
+  80%{
+    left:20px;
+  }
+  88%{
+    left:-15px;
+  }
+  92%{
+    left:10px;
+  }
+  to {left:0;opacity: 1}
 }
 @keyframes first {
-  from   {top:-1000%;left:-1000%;}
-  to {top:0;left:0;}
+  from   {left:-1000px;opacity: 0}
+  70%{
+    left:50px;
+    opacity: 1
+  }
+  80%{
+    left:20px;
+  }
+  88%{
+    left:-15px;
+  }
+  92%{
+    left:10px;
+  }
+  to {left:0;opacity: 1}
 }
 
 @-webkit-keyframes second {
-  from   {top:-1000%;right:-500%;}
-  to {top:0;left:0;}
+  from   {top:-500px;opacity: 0}
+  to {top:0;opacity: 1}
 }
 @-moz-keyframes second {
-  from   {top:-1000%;right:-500%;}
-  to {top:0;left:0;}
+  from   {top:-500px;}
+  to {top:0;opacity: 1}
 }
 @-o-keyframes second {
-  from   {top:-1000%;right:-500%;}
-  to {top:0;left:0;}
+  from   {top:-500px;}
+  to {top:0;opacity: 1}
 }
 @keyframes second {
-  from   {top:-1000%;right:-500%;}
-  to {top:0;left:0;}
+  from   {top:-500px;}
+  to {top:0;opacity: 1}
 }
 
 @-webkit-keyframes third {
-  from   {top:1000%;right:-1500%;}
-  to {top:0;left:0;}
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    top:3000px;
+  }
+
+  60% {
+    opacity: 1;
+    top:-20px;
+  }
+
+  75% {
+    top:10px;
+  }
+
+  90% {
+    top:-5px;
+  }
+
+  to {
+    top:0;
+  }
 }
 @-moz-keyframes third {
-  from   {top:1000%;right:-1500%;}
-  to {top:0;left:0;}
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    top:3000px;
+  }
+
+  60% {
+    opacity: 1;
+    top:-20px;
+  }
+
+  75% {
+    top:10px;
+  }
+
+  90% {
+    top:-5px;
+  }
+
+  to {
+    top:0;
+  }
 }
 @-o-keyframes third {
-  from   {top:1000%;right:-1500%;}
-  to {top:0;left:0;}
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    top:3000px;
+  }
+
+  60% {
+    opacity: 1;
+    top:-20px;
+  }
+
+  75% {
+    top:10px;
+  }
+
+  90% {
+    top:-5px;
+  }
+
+  to {
+    top:0;
+  }
 }
 @keyframes third {
-  from   {top:1000%;right:-1500%;}
-  to {top:0;left:0;}
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    top:3000px;
+  }
+
+  60% {
+    opacity: 1;
+    top:-20px;
+  }
+
+  75% {
+    top:10px;
+  }
+
+  90% {
+    top:-5px;
+  }
+
+  to {
+    top:0;
+  }
 }
 
 @media screen and (max-width:600px){

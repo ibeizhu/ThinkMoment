@@ -17,7 +17,6 @@ module.exports = BaseVue.extend({
         this.renderTheater();
     },
     data: function() {
-        // 作用域数据结构
         return {
             username:"",
             password:""
@@ -220,7 +219,7 @@ module.exports = BaseVue.extend({
 
             theater
                 .addScene('kobe:Welcome To Moment Home', 200)
-                .addScene('t-mac:Please Login and Enjoy yourself!', 200)
+                .addScene('t-mac:Login First and Enjoy Yourself', 200)
                 .addScene(function () {
                     setTimeout(function () {
                         $(".js_theater").animate({

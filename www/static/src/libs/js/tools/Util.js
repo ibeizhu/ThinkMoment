@@ -70,5 +70,20 @@ module.exports={
                 }).trigger('load');
             }
         });
+    },
+    /**
+     * animate
+     * @param params {$selector,animationName,callback}
+     */
+    animateCss:function (params) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        $(params.$selector).addClass('animated ' + params.animationName).one(animationEnd, function() {
+            if(!params.isNotRemoveClass){
+                $($selector).removeClass('animated ' + params.animationName);
+            }
+            if(typeof params.callback == 'function'){
+                params.callback();
+            }
+        });
     }
 };

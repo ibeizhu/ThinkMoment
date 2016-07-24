@@ -1,11 +1,12 @@
 <div class="main-tpl js_mainTpl">
-    <div class="position header">
+    <div class="header animated zoomInDown">
         <p class="title">
             WELCOME
             <span class="line"></span>
         </p>
-        <p class="name">{{account}}</p>
+        <p class="name gradient ">{{account}}</p>
         <p class="detail">{{motto}}</p>
+        <a href="/business/chat/show"><em class="icon" title="联系我"></em></a>
     </div>
     <div class="position about-me">
         <div class="info">
@@ -16,16 +17,16 @@
         </div>
         <img v-bind:src="$data.avatar">
     </div>
-    <div class="position lastest">
+    <div class="lastest js_lastest">
         <work-cpn :tpldata="$data"></work-cpn>
     </div>
     <div class="position gallery">
 
     </div>
-    <div class="position contact">
+    <div class="contact js_contact">
         <contact-cpn :tpldata="$data"></contact-cpn>
     </div>
-    <div class="position statistics">
+    <div class="statistics js_statistics">
         <statistics-cpn :tpldata="$data"></statistics-cpn>
     </div>
 </div>

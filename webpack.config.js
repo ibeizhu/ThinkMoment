@@ -3,9 +3,9 @@
  */
 var path = require("path");
 module.exports = {
-   entry: {
-       "entry": ""
-   },
+    entry: {
+        "entry": ""
+    },
     output: {
         filename: '[name].pack.js'
     },
@@ -20,9 +20,10 @@ module.exports = {
     },
     resolve: {
         alias: {
-            BaseVue: path.resolve("www/static/src/libs/framework/BaseVue.js")
+            BaseVue: path.resolve("www/static/src/libs/framework/BaseVue.js"),
+            tools: path.resolve("www/static/src/libs/js/tools")
         },
-        extensions: ['', '.js', '.jsx','.html','.css']
+        extensions: ['', '.js', '.jsx', '.html', '.css']
     },
     plugins: [
         // new ExtractTextPlugin("[name].css")
