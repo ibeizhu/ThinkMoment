@@ -38,14 +38,17 @@ module.exports = BaseVue.extend({
             if(e.target.scrollTop < this.scrollTopDistance && this.scrollFlag){
                 this.scrollFlag = false;
                 var self = this;
+                var reqParams = {
+                    userId:this.session.id,
+                    pageSize:this.params.pageSize
+                };
+                if(this.session.messages && this.session.messages[0]){
+                    reqParams.fromChatId = this.session.messages[0].chatId;
+                }
                 $.ajax({
                     url:'/business/chat/list',
                     type:"GET",
-                    data:{
-                        userId:this.session.id,
-                        page:this.params.page,
-                        pageSize:this.params.pageSize
-                    },
+                    data:reqParams,
                     success:function (res) {
                         if(_.size(res.data.data) > 0){
                             self.$dispatch('ScrollEventLoadMessage',res.data);

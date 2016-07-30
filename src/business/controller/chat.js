@@ -58,16 +58,20 @@ export default class extends Base {
             // 非管理员登录用户只获取与管理员的对话列表
             userId = loginUser.userId;
         }
-        let page = this.get("page");
         let pageSize = this.get("pageSize");
-        if(think.isEmpty(page)){
-            page = 1;
-        }
         if(think.isEmpty(pageSize)){
-            pageSize = 20;
+            pageSize = 10;
         }
-        // 这里userId当做聊天的relationId
-        let chatList = await this.model("chat").where({relationId:userId}).page(page,pageSize).order("create_time DESC").countSelect();
+        let options = {
+            relationId:userId
+        }
+        let fromChatId = this.get("fromChatId");
+        if(!think.isEmpty(fromChatId)){
+            options.chatId = {"<": fromChatId};
+        }
+        // userId即聊天的relationId
+        // let query =`select * from moment_chat where relationId = ${userId} and chatId < ${fromChatId} order by chatId desc limit 0,${pageSize}`;
+        let chatList = await this.model("chat").where(options).page(1,pageSize).order("chatId DESC").countSelect();
         chatList.data = lodash.reverse(chatList.data);
         return this.success(chatList);
     }

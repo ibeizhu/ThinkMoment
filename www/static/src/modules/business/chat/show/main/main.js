@@ -40,8 +40,7 @@ module.exports = BaseVue.extend({
             sessionIndex: 0,
             // 请求参数
             params:{
-                page:2,
-                pageSize:20
+                pageSize:10
             },
             // 接口请求的原始数据
             rawData:{}
@@ -50,7 +49,6 @@ module.exports = BaseVue.extend({
     watch: {
         sessionIndex:function () {
             this.$broadcast("SessionIndexChanged",{});
-            this.params.page = 2;
             this.getChatList(function (data) {
                 this.setSessionList(data);
             }.bind(this));
@@ -65,7 +63,6 @@ module.exports = BaseVue.extend({
     methods:{
         setSessionList:function (result,isAppend) {
             if(isAppend){
-                this.params.page++;
                 var pageList = _.toArray(result.data);
                 pageList = _.union(pageList,this.session.messages);
                 this.session.messages = pageList;
@@ -90,8 +87,7 @@ module.exports = BaseVue.extend({
                 url:'/business/chat/list',
                 data:{
                     userId:this.userList[this.sessionIndex].id,
-                    page:1,
-                    pageSize:10
+                    pageSize:this.params.pageSize
                 },
                 type:"GET",
                 success:function (res) {
