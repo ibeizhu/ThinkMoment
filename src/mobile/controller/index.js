@@ -13,4 +13,12 @@ export default class extends Base {
     indexAction(){
         return this.display();
     }
+
+    /**
+     * chat action
+     * @return {Promise} []
+     */
+    chatAction(){
+        return this.display();
+    }
 }

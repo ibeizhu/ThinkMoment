@@ -1,0 +1,95 @@
+.m-message {
+  padding: 38px 15px 52px 15px;
+  overflow-y: scroll;
+
+  li {
+    margin-bottom: 15px;
+  }
+  .time {
+    margin: 7px 0;
+    text-align: center;
+
+    > span {
+      display: inline-block;
+      padding: 5px 14px;
+      font-size: 12px;
+      color: #fff;
+      border-radius: 2px;
+      background-color: #dcdcdc;
+    }
+  }
+  .avatar {
+    float: left;
+    margin: 0 10px 0 0;
+    border-radius: 3px;
+  }
+  .text {
+    display: inline-block;
+    position: relative;
+    padding: 6px 10px;
+    max-width: ~'calc(100% - 110px)';
+    line-height: 23px;
+    font-size: 15px;
+    text-align: left;
+    word-break: break-all;
+    background-color: #fafafa;
+    border-radius: 4px;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: 9px;
+      right: 100%;
+      border: 6px solid transparent;
+      border-right-color: #fafafa;
+    }
+  }
+  .loading:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top:5px;
+    left:-35px;
+    width:24px;
+    height:24px;
+    background: url('./images/loading.png') no-repeat;
+    background-size: cover;
+    -webkit-animation: rotateCircle 2s linear infinite;
+    animation: rotateCircle 2s linear infinite;
+  }
+  @-webkit-keyframes rotateCircle {
+    from{
+      transform: rotate3d(0,0,0);
+    }
+    to{
+      transform: rotate3d(0,0,1,360deg);
+    }
+  }
+  @keyframes rotateCircle {
+    from{
+      transform: rotate3d(0,0,0);
+    }
+    to{
+      transform: rotate3d(0,0,1,360deg);
+    }
+  }
+
+  .self {
+    text-align: right;
+
+    .avatar {
+      float: right;
+      margin: 0 0 0 10px;
+    }
+    .text {
+      background-color: #b2e281;
+
+      &:before {
+        right: inherit;
+        left: 100%;
+        border-right-color: transparent;
+        border-left-color: #b2e281;
+      }
+    }
+  }
+}

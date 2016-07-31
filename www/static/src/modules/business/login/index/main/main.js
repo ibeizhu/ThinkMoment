@@ -8,66 +8,70 @@ var BaseVue = require("BaseVue");
 
 module.exports = BaseVue.extend({
     template: moduleTpl,
-    created:function() {
+    created: function () {
 
     },
-    ready:function(){
+    ready: function () {
         this.setBodySize();
         this.renderParticlesBackground();
         this.renderTheater();
     },
-    data: function() {
+    data: function () {
         return {
-            username:"",
-            password:""
+            username: "T-Mac",
+            password: "t-mac@123"
         }
     },
     methods: {
-        onLogin:function (e) {
-            if(!this.username){
+        onLogin: function (e) {
+            if (!this.username) {
                 this.renderNotice("username can't be null");
                 return;
             }
-            if(!this.password){
+            if (!this.password) {
                 this.renderNotice("password can't be null");
                 return;
             }
-            var self = this,params = {
-                username:this.username,
-                password:self.encrypt(this.password,8)
+            var self = this, params = {
+                username: this.username,
+                password: self.encrypt(this.password, 8)
             };
             $.ajax({
-                url:'/business/login/login',
-                data:params,
-                type:"GET",
-                success:function (res) {
-                    if(!res.data.result){
+                url: '/business/login/login',
+                data: params,
+                type: "GET",
+                success: function (res) {
+                    if (!res.data.result) {
                         self.renderNotice("Please check your username or password correctly");
                         self.password = "";
                         return;
                     }
-                    window.location.href = "/business/index/index";
+                    if(self.checkMobile(navigator.userAgent)){
+                        window.location.href = "/mobile/index/chat";
+                    }else{
+                        window.location.href = "/business/index/index";
+                    }
                 }
             });
         },
-        encrypt:function(str,degist){
-            if(!str){
+        encrypt: function (str, degist) {
+            if (!str) {
                 return false;
             }
-            if(!degist){
+            if (!degist) {
                 degist = 8;
             }
             str += 'think';
             var monyer = "";
-            for(var i=0;i<str.length;i++)
-                monyer+="\\"+str.charCodeAt(i).toString(degist);
+            for (var i = 0; i < str.length; i++)
+                monyer += "\\" + str.charCodeAt(i).toString(degist);
             return monyer;
         },
         /**
          * render particles animate background
          */
-        renderParticlesBackground:function () {
-            particlesJS('js_particles',{
+        renderParticlesBackground: function () {
+            particlesJS('js_particles', {
                     "particles": {
                         "number": {
                             "value": 80,
@@ -189,18 +193,18 @@ module.exports = BaseVue.extend({
          * render notice plugin
          * @param message
          */
-        renderNotice:function (message) {
+        renderNotice: function (message) {
             this.notification = new NotificationFx({
-                message : '<span class="icon icon-megaphone"></span><p>'+message+'.</p>',
-                layout : 'bar',
-                effect : 'slidetop',
-                type : 'notice', // notice, warning or error
-                onClose : function() {
+                message: '<span class="icon icon-megaphone"></span><p>' + message + '.</p>',
+                layout: 'bar',
+                effect: 'slidetop',
+                type: 'notice', // notice, warning or error
+                onClose: function () {
                 }
             });
             this.notification.show();
         },
-        renderTheater:function () {
+        renderTheater: function () {
             var self = this;
             var theater = theaterJS();
             theater
@@ -223,43 +227,78 @@ module.exports = BaseVue.extend({
                 .addScene(function () {
                     setTimeout(function () {
                         $(".js_theater").animate({
-                            'transform':'rotateX(30deg)',
-                            'top':'-2000px',
-                            'opacity':'0'
-                        },2000);
+                            'transform': 'rotateX(30deg)',
+                            'top': '-2000px',
+                            'opacity': '0'
+                        }, 2000);
                         self.showLoginPart();
-                    },1200);
+                    }, 1200);
                 });
         },
         /**
          * login part animate show
          */
-        showLoginPart:function () {
-            var count = 1,self = this;
+        showLoginPart: function () {
+            var count = 1, self = this;
             self.timerInterval = setInterval(function () {
-                if(count == 1){
+                if (count == 1) {
                     $(".username").show().addClass("first");
-                }else if(count == 2){
+                } else if (count == 2) {
                     $(".password").show().addClass("second");
-                }else if(count == 3){
+                } else if (count == 3) {
                     $(".login").show().addClass("third");
-                }else{
+                } else {
                     window.clearInterval(self.timerInterval);
                 }
                 count++;
-            },500);
+            }, 500);
         },
         /**
          * set body size eq window
          */
-        setBodySize:function () {
+        setBodySize: function () {
             $('body').width($(window).width());
             $('body').height($(window).height());
             $('#js_particles').width($(window).width());
             $('#js_particles').height($(window).height());
+        },
+        /**
+         *
+         * @param agent
+         * @returns {boolean}
+         */
+        checkMobile: function (agent) {
+            var flag = false;
+            agent = agent.toLowerCase();
+            var keywords = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser"];
+
+            //排除 Windows 桌面系统
+            if (!(agent.indexOf("windows nt") > -1) || agent.indexOf("windows nt") > -1 && agent.indexOf("compatible; msie 9.0;") > -1) {
+                //排除苹果桌面系统
+                if (!(agent.indexOf("windows nt") > -1) && !agent.indexOf("macintosh") > -1) {
+                    for (var _iterator5 = keywords, _isArray5 = Array.isArray(_iterator5), _i5 = 0, _iterator5 = _isArray5 ? _iterator5 : (0, _getIterator3.default)(_iterator5); ;) {
+                        var _ref5;
+
+                        if (_isArray5) {
+                            if (_i5 >= _iterator5.length) break;
+                            _ref5 = _iterator5[_i5++];
+                        } else {
+                            _i5 = _iterator5.next();
+                            if (_i5.done) break;
+                            _ref5 = _i5.value;
+                        }
+
+                        var item = _ref5;
+
+                        if (agent.indexOf(item) > -1) {
+                            flag = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            return flag;
         }
     },
-    filters:{
-
-    }
+    filters: {}
 });

@@ -90,6 +90,8 @@ export default class extends Base {
         params.relationId = parseInt(params.relationId);
         params.speakerId = parseInt(params.speakerId);
         params.audienceId = parseInt(params.audienceId);
+        // 虚拟chat id ,用于前端网络慢的时候菊花转,提升前端性能
+        // params.virtualChatId = parseInt(params.virtualChatId);
         
         let chatId = await this.model("chat").add(params);
         if(think.isEmpty(chatId)){
