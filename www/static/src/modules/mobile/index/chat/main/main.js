@@ -9,13 +9,15 @@ var BaseVue = require("BaseVue");
 var Head = require("../head/head");
 var Text = require("../text/text");
 var Message = require("../message/message");
+var Users = require("../users/users");
 
 module.exports = BaseVue.extend({
     template: moduleTpl,
     components:{
         "chatHead":Head,
         "text":Text,
-        "message":Message
+        "message":Message,
+        'users':Users
     },
     ready:function(){
         this.evaluateScopeData(this.rawData);
@@ -56,6 +58,12 @@ module.exports = BaseVue.extend({
         'ScrollEventLoadMessage':function (data) {
             // 添加message list
             this.setSessionList(data,true);
+        },
+        'SessionIndexChanged':function (index) {
+            this.sessionIndex = index;
+            this.getChatList(function (data) {
+                this.setSessionList(data);
+            }.bind(this));
         }
     },
     methods:{

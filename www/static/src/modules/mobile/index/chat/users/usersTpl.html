@@ -1,0 +1,6 @@
+<div class="m-usr-list">
+    <p>对话列表</p>
+    <ul>
+        <li v-for="user in userList" @click="onSetIndex($index)">{{user.name}}</li>
+    </ul>
+</div>

@@ -1,5 +1,6 @@
 <div>
     <chat-head></chat-head>
+    <users :user-list="userList" :session-index="sessionIndex"></users>
     <message :session="session" :user="user" :user-list="userList" :params="params"></message>
     <text :session="session" :user="user"></text>
 </div>

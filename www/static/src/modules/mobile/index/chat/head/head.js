@@ -10,8 +10,17 @@ module.exports = BaseVue.extend({
     template: moduleTpl,
     data:function () {
         return {
-            scrollFlag:true,
-            scrollTopDistance:20
+            show:false
+        }
+    },
+    methods:{
+        onShowUserList:function () {
+            this.show = !this.show;
+            if(this.show){
+                $('.m-usr-list').css('left','0');
+            }else{
+                $('.m-usr-list').css('left','-200px');
+            }
         }
     }
 });
