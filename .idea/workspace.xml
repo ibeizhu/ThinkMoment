@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3718d916-76c8-4481-adb3-f54c92c8c208" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/users/users.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/users/users.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/users/usersTpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/head/head.js" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/head/head.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/head/headTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/head/headTpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/main/main.js" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/main/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/main/mainTpl.html" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/main/mainTpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/text/text.less" afterPath="$PROJECT_DIR$/www/static/src/modules/mobile/index/chat/text/text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/config/config.js" afterPath="$PROJECT_DIR$/src/common/config/config.js" />
     </list>
     <list id="2db5b292-bcf1-41d8-8b9a-2480d765e8a6" name="NoCommit" comment="Current branch no commit" />
     <ignored path="ThinkMoment.iws" />
@@ -79,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/common/config/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -998,12 +990,12 @@
       <workItem from="1469850079505" duration="899000" />
       <workItem from="1469875825015" duration="13049000" />
       <workItem from="1469965267574" duration="7597000" />
-      <workItem from="1470231164700" duration="3873000" />
+      <workItem from="1470231164700" duration="3926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232433000" />
+    <option name="totallyTimeSpent" value="232486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1437,7 +1429,7 @@
     <entry file="file://$PROJECT_DIR$/src/common/config/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>

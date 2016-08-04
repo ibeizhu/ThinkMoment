@@ -143,8 +143,22 @@ export default class extends Base {
     //     let chatId = await this.model("chat").add(msg);
     //     this.success({chatId:chatId});
     // }
-    async getmsgAction(){
-        let list = await this.model("chat").select();
-        this.success(list);
+    async deleteAction(){
+        let chatId = this.get("chatId");
+        if(think.isEmpty(chatId)){
+            return this.fail({'msg':'Must provide chatId'});
+        }
+        let affectedRows = await this.model("chat").where({chatId:chatId}).delete();
+        let data = {
+            message:"没有此ID!",
+            affectedRows:affectedRows
+        };
+        if(affectedRows > 0){
+            data = {
+                message:"删除成功!",
+                affectedRows:affectedRows
+            };
+        }
+        return this.success(data);
     }
 }
