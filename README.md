@@ -1,15 +1,12 @@
 # ThinkMoment
-ThinkJs/VueJs/Mysql/Gulp/Webpack/
+This is my personal web site 
+[http://www.imoment.vip](http://www.imoment.vip)
 
-Start Service Steps:
+##ThinkJs VueJs Mysql Gulp Webpack
 
-1.gulp
+Usage
+1. npm install
+2. npm build
+3. npm start
 
-2.npm run compile
-
-3.pm2 startOrReload pm2.json
-
-
-
-nginx -s reload
 
