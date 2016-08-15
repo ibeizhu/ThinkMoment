@@ -1,15 +1,13 @@
-# ThinkMoment
-ThinkJs/VueJs/Mysql/Gulp/Webpack/
-
-Start Service Steps:
-
-1.gulp
-
-2.npm run compile
-
-3.pm2 startOrReload pm2.json
+# Thinkjs Vuejs Mysql Gulp Webpack
+This is my personal web site 
+[http://www.imoment.vip](http://www.imoment.vip)
 
 
+Usage
 
-nginx -s reload
+1. npm install
+2. in mysql ,create 'think_moment' database,exec [ source {{YourPath}}/moment.sql ]
+3. npm run build
+4. npm start
+
 
