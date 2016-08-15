@@ -21,7 +21,8 @@ module.exports = {
     resolve: {
         alias: {
             BaseVue: path.resolve("www/static/src/libs/framework/BaseVue.js"),
-            tools: path.resolve("www/static/src/libs/js/tools")
+            tools: path.resolve("www/static/src/libs/js/tools"),
+            plugin: path.resolve("www/static/src/libs/plugin")
         },
         extensions: ['', '.js', '.jsx', '.html', '.css']
     },

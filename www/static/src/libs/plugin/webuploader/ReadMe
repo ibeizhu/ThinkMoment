@@ -1,0 +1,101 @@
+/*-------------ReadMe Start------------------*/
+
+百度上传控件，默认采用html5上传，如果浏览器不支持会自动切换到flash上传，使用者无需关注这些机制，内部已经实现
+
+1.基本介绍
+
+当使用此上传控件时候，初始化时必须传入config字段（extensionField非必填）
+
+config对默认配置做extend:
+    defaultConfig:{
+        pick: {
+            id: "",
+            multiple:false
+        },
+        accept:{
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
+        method:'POST',
+        formData:{
+            "PHPSESSID": ""
+        },
+        compress:false,
+        swf:'./Uploader.swf',
+        fileVal: 'images[]',
+        server: "", //上传地址
+        fileNumLimit: 1,
+        fileSizeLimit: 5 * 1024 * 1024,    //5M
+        fileSingleSizeLimit: 5 * 1024 * 1024    //5M
+    },
+
+    extensionField={
+       target:当前调用的作用域
+       isManualUpload:true/false,是否手动开始上传，
+       其他。。。
+     }
+
+2.使用方法介绍
+
+ 第一步：在页面加载js源文件
+ <script type="text/javascript" src="<?php echo $mediaURL; ?>/javascript/plugins/webuploader/webuploader.js"></script>
+
+ 第二步：在要使用的js文件中加载本上传模块
+ var Uploader = require("../../../common/uploaderModule/uploader");
+
+ 第三步：初始化和上传操作
+
+ var obj ={
+    config:{
+         pick: {
+             id: "#js_uploaderBtn",    //选择文件按钮  必传
+             multiple:true             //是否多图上传，非必传
+         },
+         formData:{
+             "PHPSESSID": PHPSESSIONID   //上传的session id
+         },
+         server:UPLOAD_URL              //上传的服务器地址
+    },
+    extensionField:{
+        target:当前调用的作用域
+        isManualUpload:true/false,是否手动开始上传，
+        其他。。。
+    },
+    events:{
+        onFilesQueued:function(files){     //**注意:单图上传时候 onFileQueued:function(file)
+            //files 多图上传时所选择的所有图片对象
+        },
+        onFilePreview:function(currentImg,file){
+            //currentImg预览图对象
+            //可以在这里做图片的分辨率检查
+            //return false;不开始上传
+        },
+        onPercentage:function(percentage,file){
+            //percentage进度百分比
+        },
+        onSuccess:function(response,file){
+            //response上传成功的服务端响应
+        },
+        onError:function(response,file){
+            //response上传失败的服务端响应
+        },
+        onFinished:function(){
+            //文件上传完成事件,不管上传成功与否都是调用
+        }
+    }
+ }
+
+
+ 文件添加队列事件->文件预览事件->文件上传进度事件->文件上传成功/失败事件->文件上传完成事件
+ onFile(s)Queued->onFilePreview->onPercentage->onSuccess/onError->onFinished
+
+ var uploader = new UploaderModule(obj);
+
+ 第四：其他注意事项
+
+ extensionField字段中如果设置了isManualUpload=true,手动开始上传（默认选择文件直接开始上传）
+ 则必须手动的调用开始上传方法
+ uploader.onStartUpload();
+
+/*-------------ReadMe End------------------*/
