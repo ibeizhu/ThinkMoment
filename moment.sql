@@ -215,3 +215,38 @@ VALUES
 	(600021, 100002, 100002, 100002, 'this morning\n', 0,0, 1466928251203, 1466928251203),
 	(600022, 100003, 100003, 100003, 'oh,sorry Moment,I am offline this days\n', 0,0, 1466928571946, 1466928571946);
 COMMIT;
+
+---- 暂时没实现以下
+---- ----------------------------
+----  Table structure for `moment_blog`
+---- ----------------------------
+--DROP TABLE IF EXISTS `moment_blog`;
+--CREATE TABLE `moment_comment`(
+--    `blogId` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+--    `relationId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '关系id',
+--    `speakerId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '说话人',
+--    `audienceId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '聆听者',
+--    `message` text COMMENT '聊天内容',
+--    `status` tinyint(2) NOT NULL DEFAULT 0 COMMENT '未读状态',
+--    `virtualChatId` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '虚拟聊天id',
+--    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+--    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
+--    PRIMARY KEY (`chatId`)
+--)ENGINE=MyISAM AUTO_INCREMENT=700000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='博客表';
+
+-- ----------------------------
+--  Table structure for `moment_comment`
+-- ----------------------------
+--DROP TABLE IF EXISTS `moment_comment`;
+--CREATE TABLE `moment_comment`(
+--    `commentId` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+--    `relationId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '关系id',
+--    `speakerId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '说话人',
+--    `audienceId` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '聆听者',
+--    `message` text COMMENT '聊天内容',
+--    `status` tinyint(2) NOT NULL DEFAULT 0 COMMENT '未读状态',
+--    `virtualChatId` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '虚拟聊天id',
+--    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+--    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
+--    PRIMARY KEY (`chatId`)
+--)ENGINE=MyISAM AUTO_INCREMENT=800000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='评论表';

@@ -42,10 +42,10 @@ export default class extends think.controller.base {
                 controller:"login",
                 actions:["index","login"]
             },
-            // {
-            //     controller:"index",
-            //     actions:["index"]
-            // },
+            {
+                controller:"demo",
+                actions:["index"]
+            },
             // {
             //     controller:"chat",
             //     actions:["test","push","send","show"]
