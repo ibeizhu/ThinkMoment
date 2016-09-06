@@ -250,3 +250,17 @@ COMMIT;
 --    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
 --    PRIMARY KEY (`chatId`)
 --)ENGINE=MyISAM AUTO_INCREMENT=800000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='评论表';
+
+ ----------------------------
+  Table structure for `moment_visit`
+ ----------------------------
+DROP TABLE IF EXISTS `moment_visit`;
+CREATE TABLE `moment_visit`(
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+    `pageType` varchar(60) NOT NULL DEFAULT '' COMMENT '页面类型',
+    `ip` varchar(30) NOT NULL DEFAULT '' COMMENT 'ip地址',
+    `count` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '访问数',
+    `create_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
+    `update_time` bigint(13) unsigned NOT NULL DEFAULT 0 COMMENT '修改时间',
+    PRIMARY KEY (`id`)
+)ENGINE=MyISAM AUTO_INCREMENT=900000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='访问表';

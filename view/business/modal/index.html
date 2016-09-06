@@ -7,7 +7,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="/static/build/images/favicon.ico" />
     <link rel="stylesheet" href="/static/build/libs/styles/initial.css" type="text/css">
 </head>
-<body>
+<body style="padding: 20px;">
+    <div style="text-align: center;margin-top: 30px;">
+        You are the Num.<%= controller.visitCount %> to view the vue-flexible-modal demo
+    </div>
     <div class="page-wrap js_pageWrap" id="page">
     </div>
     <script type="text/javascript" src="<%= controller.entryJs %>"></script>
