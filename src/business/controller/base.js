@@ -43,7 +43,7 @@ export default class extends think.controller.base {
                 actions:["index","login"]
             },
             {
-                controller:"demo",
+                controller:"modal",
                 actions:["index"]
             },
             // {
