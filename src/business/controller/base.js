@@ -66,7 +66,7 @@ export default class extends think.controller.base {
                 if(this.isAjax()){
                     return this.error('NO_LOGIN');
                 }else{
-                    return this.redirect("/business/login/index");
+                    return this.redirect("/login");
                 }
             }
         }

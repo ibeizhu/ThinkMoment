@@ -47,9 +47,9 @@ module.exports = BaseVue.extend({
                         return;
                     }
                     if(self.checkMobile(navigator.userAgent)){
-                        window.location.href = "/mobile/index/chat";
+                        window.location.href = "/chat";
                     }else{
-                        window.location.href = "/business/index/index";
+                        window.location.href = "/";
                     }
                 }
             });

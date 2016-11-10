@@ -18,12 +18,6 @@
             },
             MODAL_CANCEL_EVENT(){
 
-            },
-            MODAL_OK_EVENT2(){
-                // TODO your logic
-            },
-            MODAL_CANCEL_EVENT2(){
-
             }
         },
         data:{
@@ -58,7 +52,7 @@
 
 <template>
     <div>
-        <br>
+        <label class="label">Use as Modal</label>
         <br>
         <button @click="onShowModal1">Click Show Modal1</button>
         <br>
@@ -83,7 +77,7 @@
     </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="less">
     .control {
         position: relative;
         text-align: left;
@@ -151,5 +145,11 @@
     }
     .ok{
         float: right;
+    }
+    .gradient {
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 60s infinite linear;
     }
 </style>
