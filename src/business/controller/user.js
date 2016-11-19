@@ -66,4 +66,20 @@ export default class extends Base {
         }
         return this.success(data);
     }
+    async updateAction(){
+        const userInfo = await this.session("userInfo");
+        if(!userInfo.isAdmin){
+            return this.success('you must have admin role');
+        }
+        let id = this.get("id");
+        let key = this.get("key");
+        let value = this.get("value");
+        if(!id || !key || !value){
+            return this.success('you must provide [id,key,value]');
+        }
+        let user = await this.model("user").where({id:id}).find();
+        user[key] = value;
+        let affectedRows = await this.model("user").where({id:id}).update(user);
+        return this.success(affectedRows);
+    }
 }
