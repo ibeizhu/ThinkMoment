@@ -1,0 +1,32 @@
+#!/bin/bash
+
+CUR_DIR=$(cd "$(dirname "$0")"; pwd)
+cd $CUR_DIR/../..
+
+files=$(git diff --cached --name-only | grep -e '\.js$' -e '\.vue$')
+
+# Prevent ESLint help message if no files matched
+if [[ $files = "" ]] ; then
+    exit 0
+fi
+
+START_DATE=$(date +"%s")
+
+failed=0
+for file in ${files}; do
+    git show :$file | ./node_modules/.bin/eslint $file
+    if [[ $? != 0 ]] ; then
+        failed=1
+    fi
+done;
+
+if [[ $failed != 0 ]] ; then
+    echo "🚫🚫🚫 ESLint failed, git commit denied!"
+    exit $failed
+fi
+
+END_DATE=$(date +"%s")
+
+DIFF=$(($END_DATE - $START_DATE))
+echo "ESLint took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
+exit 0
