@@ -2,7 +2,7 @@
   "apps": [{
     "name": "ThinkMoment",
     "script": "www/production.js",
-    "cwd": "/root/ThinkMoment",
+    "cwd": "/root/project/ThinkMoment",
     "exec_mode": "cluster",
     "instances": 0,
     "max_memory_restart": "1G",
