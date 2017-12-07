@@ -18,41 +18,42 @@ module.exports = BaseVue.extend({
     },
     data: function () {
         return {
-            username: "T-Mac",
-            password: "t-mac@123"
+            username: "user",
+            password: "123456"
         }
     },
     methods: {
         onLogin: function (e) {
-            if (!this.username) {
-                this.renderNotice("username can't be null");
-                return;
-            }
-            if (!this.password) {
-                this.renderNotice("password can't be null");
-                return;
-            }
-            var self = this, params = {
-                username: this.username,
-                password: self.encrypt(this.password, 8)
-            };
-            $.ajax({
-                url: '/business/login/login',
-                data: params,
-                type: "GET",
-                success: function (res) {
-                    if (!res.data.result) {
-                        self.renderNotice("Please check your username or password correctly");
-                        self.password = "";
-                        return;
-                    }
-                    if(self.checkMobile(navigator.userAgent)){
-                        window.location.href = "/chat";
-                    }else{
-                        window.location.href = "/";
-                    }
-                }
-            });
+            // if (!this.username) {
+            //     this.renderNotice("username can't be null");
+            //     return;
+            // }
+            // if (!this.password) {
+            //     this.renderNotice("password can't be null");
+            //     return;
+            // }
+            // var self = this, params = {
+            //     username: this.username,
+            //     password: self.encrypt(this.password, 8)
+            // };
+            // $.ajax({
+            //     url: '/business/login/login',
+            //     data: params,
+            //     type: "GET",
+            //     success: function (res) {
+            //         if (!res.data.result) {
+            //             self.renderNotice("Please check your username or password correctly");
+            //             self.password = "";
+            //             return;
+            //         }
+            //         if(self.checkMobile(navigator.userAgent)){
+            //             window.location.href = "/chat";
+            //         }else{
+            //             window.location.href = "/";
+            //         }
+            //     }
+            // });
+            window.location.href = "https://blog.imoment.vip";
         },
         encrypt: function (str, degist) {
             if (!str) {

@@ -1,7 +1,6 @@
 #idea
 .idea
 .idea/*
-.idea/workspace.xml
 *.iml
 .settings/*
 .project
